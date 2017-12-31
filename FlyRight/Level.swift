@@ -21,7 +21,7 @@ let NumRows = 12
 class Level {
     
     // This var will be the running static score of how many tiles the spaceShip has flown over.
-    static var score: Int = 0
+    static var tiles: Int = 0
     
     // This Bool will trigger the showing of the Game-Over screen.
     static var isGameOver : Bool = false
@@ -96,7 +96,7 @@ class Level {
     let spaceShip = Space(column: shipPosX, row: shipPosY, spaceType: SpaceType.ship())
     if (timesRun > 0 && !Level.isGameOver) {
         Space.move(direction : Space.getDirection(), spaceShip: spaceShip)
-        Level.score += 1
+        Level.tiles += 1
         self.viewController.updateLabels()
         if (!outBounds(spaceShip: spaceShip)) {
         shipPosY = spaceShip.row
@@ -106,6 +106,7 @@ class Level {
             self.viewController.showGameOver()
         }
         detectAsteroid(row: shipPosY, column: shipPosX)
+        addAsteroid()
     }
     timesRun += 1
     self.spaces[shipPosX, shipPosY] = spaceShip
@@ -132,9 +133,18 @@ class Level {
         }
     }
     
+    func addAsteroid() {
+        let randomX = Int(arc4random_uniform(12))
+        let randomY = Int(arc4random_uniform(12))
+        if !((randomX == shipPosX) && (randomY == shipPosY)) {
+            tiles[randomX,randomY] = Tile()
+        }
+    }
+    
+    // UPDATE THIS JACOB
     // This method will recalculate the score at the restart of the game.
     static func calculateScore() {
-        score = 0
+        tiles = 0
     }
 
   // MARK: Query the level

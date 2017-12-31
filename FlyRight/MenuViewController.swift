@@ -27,6 +27,8 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+
         // Configure the view.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
@@ -40,5 +42,7 @@ class MenuViewController: UIViewController {
         // Present the scene.
         skView.presentScene(scene)
     }
-}
+    
+    }
+
 

@@ -1,2 +1,2 @@
 # FlyRight
-Delve into the depths of space and maneuver your ship to stay alive.
+Delve into the depths of space and fight to stay alive.

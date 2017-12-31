@@ -13,12 +13,33 @@ import AVFoundation
 
 class GameViewController: UIViewController {
     
-    // This outlet will keep track of the score.
+    // This outlet will keep track of the calculated score.
+    
+    // This outlet counts number of turns to factor into the score.
+    @IBOutlet weak var turnLabel: UILabel!
+    
+    // This outlet logs tiles crossed to factor into the score.
+    @IBOutlet weak var tilesLabel: UILabel!
+    
+    // This outlet will periodically calculate scores using the vales of tilesLabel and turnLabel.
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    
+    
+    // This var will be a running count of all turns.
+    var turns: Int = 0
     
     //This method will update any labels with appropriate values.
     func updateLabels() {
-        scoreLabel.text = String(format: "%ld", Level.score)
+        tilesLabel.text = String(format: "%ld", Level.tiles)
+        turnLabel.text = String(format: "%ld", turns)
+        //here the genScore() func is dynamically called to continually update the displayed total score
+        scoreLabel.text = String(format: "%ld", genScore())
+    }
+    
+    // This func will correctly relate the turns and tiles to generate a score.
+    func genScore() -> Int {
+        return (Level.tiles * 4 / 10) * (turns * 12 / 10) * 10
     }
     
     // These variables will correspond to each direction with numbers 0-3.
@@ -31,6 +52,7 @@ class GameViewController: UIViewController {
         if (directionCount == 3) {
             directionCount = -1
         }
+        turns += 1
     }
     
     // Game-Over panel if asteroid is hit.

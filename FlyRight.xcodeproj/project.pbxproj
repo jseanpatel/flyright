@@ -19,7 +19,8 @@
 		F515A36E1F0B404500541422 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A36D1F0B404500541422 /* Level.swift */; };
 		F515A3721F148D9C00541422 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A3711F148D9C00541422 /* Tile.swift */; };
 		F515A3741F1490AB00541422 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A3731F1490AB00541422 /* Extensions.swift */; };
-		F5FE95511F30FC1300F04B15 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE95501F30FC1300F04B15 /* MenuViewController.swift */; };
+		F55153141F8363580021CB60 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F55153131F8363570021CB60 /* MenuScene.sks */; };
+		F55153161F83669A0021CB60 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55153151F83669A0021CB60 /* MenuScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,8 @@
 		F515A36D1F0B404500541422 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		F515A3711F148D9C00541422 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		F515A3731F1490AB00541422 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F5FE95501F30FC1300F04B15 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F55153131F8363570021CB60 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		F55153151F83669A0021CB60 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = ../MenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +76,10 @@
 				F515A36B1F0A287A00541422 /* Array2D.swift */,
 				F515A3731F1490AB00541422 /* Extensions.swift */,
 				F515A3351F087A4900541422 /* GameScene.swift */,
+				F55153151F83669A0021CB60 /* MenuScene.swift */,
+				F55153131F8363570021CB60 /* MenuScene.sks */,
 				F515A3371F087A4900541422 /* GameViewController.swift */,
 				F515A36D1F0B404500541422 /* Level.swift */,
-				F5FE95501F30FC1300F04B15 /* MenuViewController.swift */,
 				F515A3691F0883AA00541422 /* Space.swift */,
 				F515A3711F148D9C00541422 /* Tile.swift */,
 				F515A3411F087A4900541422 /* Info.plist */,
@@ -152,6 +155,7 @@
 				E2E805C41F400EFB00CFC795 /* Level_1.json in Resources */,
 				F515A33B1F087A4900541422 /* Main.storyboard in Resources */,
 				F515A33D1F087A4900541422 /* Assets.xcassets in Resources */,
+				F55153141F8363580021CB60 /* MenuScene.sks in Resources */,
 				F515A3401F087A4900541422 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,8 +170,8 @@
 				F515A36E1F0B404500541422 /* Level.swift in Sources */,
 				F515A3361F087A4900541422 /* GameScene.swift in Sources */,
 				F515A3381F087A4900541422 /* GameViewController.swift in Sources */,
+				F55153161F83669A0021CB60 /* MenuScene.swift in Sources */,
 				F515A3741F1490AB00541422 /* Extensions.swift in Sources */,
-				F5FE95511F30FC1300F04B15 /* MenuViewController.swift in Sources */,
 				F515A3721F148D9C00541422 /* Tile.swift in Sources */,
 				F515A36A1F0883AA00541422 /* Space.swift in Sources */,
 				F515A3301F087A4900541422 /* AppDelegate.swift in Sources */,
