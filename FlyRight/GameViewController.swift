@@ -45,33 +45,16 @@ class GameViewController: UIViewController {
         level.getShipRef()?.changeDirection()
         turns += 1
     }
-
-    // Game-Over panel if asteroid is hit.
-    @IBOutlet weak var gameOverPanel: UIImageView!
-
+    
+    //End the game and transition over the GameOverViewController.
+    func gameOver() {
+        self.performSegue(withIdentifier: "toGameOverSegue", sender: nil)
+    }
+    
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
 
     // MARK: Properties
-
-    // Controls the display of the Game-Over panel. No interaction enabled.
-    func showGameOver() {
-        gameOverPanel.isHidden = false
-        scene.isUserInteractionEnabled = false
-
-        self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideGameOver))
-        self.view.addGestureRecognizer(self.tapGestureRecognizer)
-    }
-
-    // Hides the Game-Over panel and then restarts the game.
-    @objc func hideGameOver() {
-        view.removeGestureRecognizer(tapGestureRecognizer)
-        tapGestureRecognizer = nil
-
-        gameOverPanel.isHidden = true
-        scene.isUserInteractionEnabled = true
-        beginGame()
-    }
 
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     var scene: GameScene!
@@ -100,9 +83,6 @@ class GameViewController: UIViewController {
         // Configure the view.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
-
-        //Hide the Game-Over panel before the game starts.
-        gameOverPanel.isHidden = true
 
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)

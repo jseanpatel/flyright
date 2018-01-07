@@ -113,7 +113,7 @@ class Level {
             self.viewController.updateLabels()
             if (outBounds(spaceShip: spaceShip)) {
                 Level.isGameOver = true
-                self.viewController.showGameOver()
+                self.viewController.gameOver()
             }
             detectAsteroid(row: ((getShipRef()?.getRow()))!, column: (getShipRef()?.getColumn())!)
             addAsteroid()
@@ -146,7 +146,7 @@ class Level {
     func detectAsteroid(row: Int, column: Int) {
         if (tiles[column, row] != nil) {
             Level.isGameOver = true
-            self.viewController.showGameOver()
+            self.viewController.gameOver()
         }
     }
 

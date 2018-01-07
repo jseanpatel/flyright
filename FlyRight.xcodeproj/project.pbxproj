@@ -22,6 +22,7 @@
 		F57D316D1FFF4D1900305849 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D316C1FFF4D1900305849 /* MenuViewController.swift */; };
 		F57D316F1FFF637B00305849 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D316E1FFF637B00305849 /* MenuScene.swift */; };
 		F57D31732000A12D00305849 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31722000A12D00305849 /* GameOverViewController.swift */; };
+		F57D31752002279800305849 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31742002279800305849 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F57D316C1FFF4D1900305849 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
 		F57D316E1FFF637B00305849 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		F57D31722000A12D00305849 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		F57D31742002279800305849 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				F515A3731F1490AB00541422 /* Extensions.swift */,
 				F515A3351F087A4900541422 /* GameScene.swift */,
 				F57D316E1FFF637B00305849 /* MenuScene.swift */,
+				F57D31742002279800305849 /* GameOverScene.swift */,
 				F57D31722000A12D00305849 /* GameOverViewController.swift */,
 				F515A3371F087A4900541422 /* GameViewController.swift */,
 				F57D316C1FFF4D1900305849 /* MenuViewController.swift */,
@@ -179,6 +182,7 @@
 				F57D31732000A12D00305849 /* GameOverViewController.swift in Sources */,
 				F57D316F1FFF637B00305849 /* MenuScene.swift in Sources */,
 				F515A3301F087A4900541422 /* AppDelegate.swift in Sources */,
+				F57D31752002279800305849 /* GameOverScene.swift in Sources */,
 				F515A36C1F0A287A00541422 /* Array2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

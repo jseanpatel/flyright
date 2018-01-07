@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vk-Xo-ocY">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,15 +22,28 @@
                         <viewControllerLayoutGuide type="top" id="flW-Rk-bBA"/>
                         <viewControllerLayoutGuide type="bottom" id="jwL-By-NeL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nbu-km-VVj" customClass="SKView">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="menuID" id="nbu-km-VVj" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-IS-gWd">
+                                <rect key="frame" x="7" y="109" width="304" height="350"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Spaceship"/>
+                                <connections>
+                                    <action selector="moveToGame:" destination="8vk-Xo-ocY" eventType="touchUpInside" id="dm9-zn-fxj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="toGameSegue" id="gtO-vl-KFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3K-EZ-0s3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-623" y="113"/>
+            <point key="canvasLocation" x="-547.5" y="106.69014084507042"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -40,7 +53,7 @@
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
-                    <view key="view" multipleTouchEnabled="YES" contentMode="bottom" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="bottom" restorationIdentifier="gameID" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -73,7 +86,7 @@
                                         <rect key="frame" x="101" y="0.0" width="69" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-Rp-FT8">
-                                                <rect key="frame" x="0.5" y="0.0" width="67.5" height="20"/>
+                                                <rect key="frame" x="1" y="0.0" width="67.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.90588235294117647" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -120,6 +133,7 @@
                         <outlet property="scoreLabel" destination="g8R-Jg-gM0" id="Wj5-wu-yZ8"/>
                         <outlet property="tilesLabel" destination="EWz-c4-dMJ" id="JlZ-Jm-WVk"/>
                         <outlet property="turnLabel" destination="ROf-Nj-UQ6" id="LwS-If-99g"/>
+                        <segue destination="sqg-43-vcV" kind="show" identifier="toGameOverSegue" id="gF3-3v-o6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -137,24 +151,18 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="gameOverID" id="2jV-t8-YRz" customClass="GameOverViewController">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcz-Hn-VdU">
-                                <rect key="frame" x="40" y="182" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.32017357615122644" green="0.57896057477110563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLr-Rg-h3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="123"/>
+            <point key="canvasLocation" x="1190.625" y="122.53521126760563"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button" width="285" height="58"/>
         <image name="Scoreboard" width="282" height="60"/>
+        <image name="Spaceship" width="302" height="350"/>
     </resources>
     <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
