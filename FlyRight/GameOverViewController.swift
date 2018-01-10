@@ -27,6 +27,14 @@ class GameOverController: UIViewController {
         return true
     }
     
+    @IBAction func moveToGame(_ sender: Any) {
+        self.performSegue(withIdentifier: "toGameSegue", sender: nil)
+    }
+    
+    @IBAction func moveToMenu(_ sender: Any) {
+        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+    }
+    
     //  self.performSegue(withIdentifier: "toGameSegue", sender: nil)
     
     

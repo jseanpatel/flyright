@@ -16,11 +16,11 @@ let NumRows = 12
 var timesRun = 0
 
 class Level {
-    
+
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     //deltele
     var scene: GameScene!
-    
+
     // Reference to Space from Level.
     var shipRef: Space?
 
@@ -55,12 +55,12 @@ class Level {
         // one element for each row of the level. Each of those row elements in
         // turn is also an array describing the columns in that row. If a column
         // is 1, it means there is a tile at that location, 0 means there is not.
-        
-        
+
+
         self.scene? = self.viewController.scene
 
         guard let tilesArray = dictionary["tiles"] as? [[Int]] else { return }
-        
+
         shipRef = Space(spaceType: SpaceType.ship())
 
         // Loop through the rows...
@@ -111,43 +111,41 @@ class Level {
             spaceShip.move()
             Level.tiles += 1
             self.viewController.updateLabels()
-            if (outBounds(spaceShip: spaceShip)) {
-                Level.isGameOver = true
-                self.viewController.gameOver()
+            if !(detectAsteroid(row: ((getShipRef()?.getRow()))!, column: (getShipRef()?.getColumn())!)) {
+                addAsteroid()
             }
-            detectAsteroid(row: ((getShipRef()?.getRow()))!, column: (getShipRef()?.getColumn())!)
-            addAsteroid()
         }
         timesRun += 1
         set.insert(spaceShip)
         return set
     }
-    
+
     func getShipRef() -> Space? {
         return shipRef
     }
-    
+
     func setShipRef(space: Space) {
         shipRef? = space
     }
 
-    // This method is designed to determine if the Spaceship's current coordinates are out of bounds.
-    func outBounds(spaceShip: Space) -> Bool {
-        if ((spaceShip.column < NumColumns - NumColumns) || (spaceShip.column >= NumColumns)) {
-            return true
-        }
-        if ((spaceShip.row < NumRows - NumRows) || (spaceShip.row >= NumRows)) {
-            return true
-        }
-        return false
-    }
-
     //Checks the Dictionary to see if an Asteroid is at the given index of the spaceShip and triggers "Game Over" if so.
-    func detectAsteroid(row: Int, column: Int) {
+    func detectAsteroid(row: Int, column: Int) -> Bool {
+        if ((column < NumColumns - NumColumns) || (column >= NumColumns)) {
+            Level.isGameOver = true
+            self.viewController.gameOver()
+            return true
+        }
+        if ((row < NumRows - NumRows) || (row >= NumRows)) {
+            Level.isGameOver = true
+            self.viewController.gameOver()
+            return true
+        }
         if (tiles[column, row] != nil) {
             Level.isGameOver = true
             self.viewController.gameOver()
+            return true
         }
+        return false
     }
 
     func addAsteroid() {
