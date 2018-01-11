@@ -29,11 +29,13 @@ class GameOverScene: SKScene {
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         // orig 0.5-0.5
         
+        /**
         // Put an image on the background. Because the scene's anchorPoint is
         // (0.5, 0.5), the background image will always be centered on the screen.
         let background = SKSpriteNode(imageNamed: "Background")
         background.size = size
         addChild(background)
+         */
         
         // Add a new node that is the container for all other layers on the playing
         // field. This gameLayer is also centered in the screen.

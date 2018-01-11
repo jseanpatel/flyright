@@ -43,9 +43,9 @@ class Level {
 
     var tileCounter = 0
 
-    // Variable of viewController to call showGameOver()
+    // Variable of viewController to call showGameOver() (moved to gameOver).
     var viewController: GameViewController!
-
+    
     // MARK: Initialization
 
     // Create a level by loading it from a file.
@@ -55,7 +55,6 @@ class Level {
         // one element for each row of the level. Each of those row elements in
         // turn is also an array describing the columns in that row. If a column
         // is 1, it means there is a tile at that location, 0 means there is not.
-
 
         self.scene? = self.viewController.scene
 
