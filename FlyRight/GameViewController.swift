@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
 
     // This var will be a running count of all turns.
     var turns: Int = 0
-    
+
     // Variable of gameOverViewController to call showGameOver()
     var gameOverViewController: GameOverViewController!
 
@@ -48,13 +48,25 @@ class GameViewController: UIViewController {
         level.getShipRef()?.changeDirection()
         turns += 1
     }
-    
+
     //End the game and transition over the GameOverViewController.
     func gameOver() {
+
+        let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
+        self.addChildViewController(gameOverVC)
+        gameOverVC.view.frame = self.view.frame
+        self.view.addSubview(gameOverVC.view)
+        gameOverVC.didMove(toParentViewController: self)
+
+        /*
+        let GameOver = GameOverViewController()
+        GameOver.modalPresentationStyle = .overFullScreen
+        self.present(GameOver, animated: true, completion: nil)
+ 
         self.performSegue(withIdentifier: "toGameOverSegue", sender: nil)
-       gameOverViewController?.showGameOver()
+         */
     }
-    
+
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
 

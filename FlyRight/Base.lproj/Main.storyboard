@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vk-Xo-ocY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -137,36 +137,40 @@
                         <outlet property="scoreLabel" destination="g8R-Jg-gM0" id="Wj5-wu-yZ8"/>
                         <outlet property="tilesLabel" destination="EWz-c4-dMJ" id="JlZ-Jm-WVk"/>
                         <outlet property="turnLabel" destination="ROf-Nj-UQ6" id="LwS-If-99g"/>
-                        <segue destination="sqg-43-vcV" kind="show" identifier="toGameOverSegue" id="gF3-3v-o6T"/>
+                        <segue destination="sqg-43-vcV" kind="popoverPresentation" identifier="toGameOverSegue" popoverAnchorView="3se-qz-xqx" id="WQo-O6-hT9">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288.75" y="113.02816901408451"/>
+            <point key="canvasLocation" x="444" y="123"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="Yyw-3c-Q42">
             <objects>
-                <viewController id="sqg-43-vcV" customClass="GameOverViewController" customModule="FlyRight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameOverID" id="sqg-43-vcV" customClass="GameOverViewController" customModule="FlyRight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ml9-gq-uD1"/>
                         <viewControllerLayoutGuide type="bottom" id="Ttg-yj-dC3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="gameOverID" id="2jV-t8-YRz" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" restorationIdentifier="gameOverID" id="2jV-t8-YRz" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9a-el-VVf">
-                                <rect key="frame" x="61" y="245" width="200" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9a-el-VVf">
+                                <rect key="frame" x="50" y="110" width="200" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Game Over Button"/>
                                 <connections>
                                     <action selector="restartGame:" destination="sqg-43-vcV" eventType="touchUpInside" id="0GG-ik-Thk"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.32017357619999998" green="0.57896057479999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLr-Rg-h3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
