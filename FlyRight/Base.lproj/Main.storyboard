@@ -166,18 +166,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-2p-vB1">
                                 <rect key="frame" x="40" y="200" width="240" height="168"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love Lucas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-1r-xlp">
-                                        <rect key="frame" x="77" y="-50" width="86" height="20.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="86" id="6AL-cX-Ux2"/>
-                                            <constraint firstAttribute="height" constant="20.5" id="XGO-hy-Vdi"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-Vw-dDi">
-                                        <rect key="frame" x="20" y="-12" width="200" height="80"/>
+                                    <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-Vw-dDi">
+                                        <rect key="frame" x="20" y="44" width="200" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="CPt-P3-bs4"/>
                                             <constraint firstAttribute="height" constant="80" id="NjF-ZC-Qsd"/>
@@ -190,9 +180,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="qBt-Vw-dDi" firstAttribute="top" secondItem="IOC-1r-xlp" secondAttribute="bottom" constant="17.5" id="1up-kz-poW"/>
                                     <constraint firstAttribute="bottom" secondItem="qBt-Vw-dDi" secondAttribute="bottom" constant="100" id="44a-07-6Xa"/>
-                                    <constraint firstItem="IOC-1r-xlp" firstAttribute="centerX" secondItem="8ua-2p-vB1" secondAttribute="centerX" id="kLw-TK-xMp"/>
                                     <constraint firstItem="qBt-Vw-dDi" firstAttribute="centerX" secondItem="8ua-2p-vB1" secondAttribute="centerX" id="sEw-wh-S5E"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
