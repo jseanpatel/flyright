@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vk-Xo-ocY">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,18 +26,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fly Right White" translatesAutoresizingMaskIntoConstraints="NO" id="dvH-Rr-Boq">
-                                <rect key="frame" x="16" y="28" width="288" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPi-I5-ySX">
-                                <rect key="frame" x="20" y="468" width="280" height="58"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <state key="normal" image="Button"/>
+                                <rect key="frame" x="7" y="188" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <state key="normal" image="Play Button"/>
                                 <connections>
                                     <action selector="moveToGame:" destination="8vk-Xo-ocY" eventType="touchUpInside" id="S9C-A8-nPD"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Options" translatesAutoresizingMaskIntoConstraints="NO" id="eiv-dy-yO4">
+                                <rect key="frame" x="25" y="263" width="285" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Credits Button" translatesAutoresizingMaskIntoConstraints="NO" id="src-2f-z62">
+                                <rect key="frame" x="25" y="343" width="285" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -179,8 +183,10 @@
     </scenes>
     <resources>
         <image name="Button" width="285" height="58"/>
-        <image name="Fly Right White" width="168" height="35"/>
+        <image name="Credits Button" width="285" height="60"/>
         <image name="Game Over Button" width="200" height="80"/>
+        <image name="Options" width="285" height="60"/>
+        <image name="Play Button" width="285" height="60"/>
         <image name="Scoreboard" width="282" height="60"/>
     </resources>
     <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
