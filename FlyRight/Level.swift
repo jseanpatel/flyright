@@ -18,7 +18,6 @@ var timesRun = 0
 class Level {
 
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
-    //deltele
     var scene: GameScene!
 
     // Reference to Space from Level.

@@ -13,8 +13,6 @@ import AVFoundation
 
 class GameViewController: UIViewController {
 
-    // This outlet will keep track of the calculated score.
-
     // This outlet counts number of turns to factor into the score.
     @IBOutlet weak var turnLabel: UILabel!
 
@@ -58,15 +56,21 @@ class GameViewController: UIViewController {
         self.view.addSubview(gameOverVC.view)
         gameOverVC.didMove(toParentViewController: self)
 
-        /*
-        let GameOver = GameOverViewController()
-        GameOver.modalPresentationStyle = .overFullScreen
-        self.present(GameOver, animated: true, completion: nil)
- 
-        self.performSegue(withIdentifier: "toGameOverSegue", sender: nil)
-         */
+    }
+    
+    // Reset all labels to 0 when restarting game.
+    func resetLabels() {
+        tilesLabel.text = String(format: "%ld", 0)
+        turnLabel.text = String(format: "%ld", 0)
+        //here the genScore() func is dynamically called to continually update the displayed total score
+        scoreLabel.text = String(format: "%ld", 0)
     }
 
+    // Refresh the game when restartGame() is called in GameOverViewController
+    func refreshGame() {
+        setUpLevel()
+    }
+    
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
 
@@ -93,6 +97,36 @@ class GameViewController: UIViewController {
         return [.portrait, .portraitUpsideDown]
     }
 
+    func setUpLevel() {
+        super.viewDidLoad()
+        
+        // Configure the view.
+        let skView = view as! SKView
+        skView.isMultipleTouchEnabled = false
+        
+        // Create and configure the scene.
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .aspectFill
+        
+        scene.gameViewController = self
+        
+        // Load the level.
+        level = Level(filename: "Level_1", scene: scene)
+        scene.level = level
+        level.viewController = self
+        
+        scene.addTiles()
+        
+        //Sync the starting score with the game.
+        updateLabels()
+        
+        // Present the scene.
+        skView.presentScene(scene)
+        
+        // Start the game.
+        beginGame()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -125,12 +159,14 @@ class GameViewController: UIViewController {
 
     func beginGame() {
         shuffle()
+        // scene.animateBeginGame()
     }
 
     func shuffle() {
         // Fill up the level with new spaces, and create sprites for them.
         let newSpace = level.shuffle()
         scene.addSprites(for: newSpace)
+        resetLabels()
     }
 
 }

@@ -43,6 +43,8 @@ extension UIImage {
 
 class GameScene: SKScene {
 
+    var gameViewController = GameViewController()
+    
     // MARK: Properties
 
     // This is marked as ! because it will not initially have a value, but pretty
@@ -53,7 +55,7 @@ class GameScene: SKScene {
     let TileWidth: CGFloat = 28
     let TileHeight: CGFloat = 28
     // orig 30-30
-
+    
     var currTime: Date = Date()
 
     let gameLayer = SKNode()
@@ -77,6 +79,10 @@ class GameScene: SKScene {
         }
     }
  
+    func refreshGame() {
+        self.gameViewController.refreshGame()
+    }
+    
     func shuffle() {
         removeAllSpaces()
 
@@ -155,6 +161,15 @@ class GameScene: SKScene {
             space.sprite = sprite
 
         }
+    }
+    
+    // Add animations every time the game is restarted.
+    func animateBeginGame(_ completion: @escaping () -> ()) {
+        gameLayer.isHidden = false
+        gameLayer.position = CGPoint(x: 0, y: size.height)
+        let action = SKAction.move(by: CGVector(dx: 0, dy: -size.height), duration: 0.3)
+        action.timingMode = .easeOut
+        gameLayer.run(action, completion: completion)
     }
 
 // MARK: Point conversion

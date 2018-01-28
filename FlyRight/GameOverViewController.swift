@@ -13,9 +13,8 @@ import AVFoundation
 class GameOverViewController: UIViewController {
 
     var scene: GameOverScene!
-
-    // For recognizing gestures.
-    var tapGestureRecognizer: UITapGestureRecognizer!
+    
+    var gameScene: GameScene
 
     // MARK: View Controller Functions
 
@@ -24,9 +23,10 @@ class GameOverViewController: UIViewController {
     }
 
     @IBAction func restartGame(_ sender: Any) {
-        self.removeAnimate()
+       self.removeAnimate()
+       gameScene.refreshGame()
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
