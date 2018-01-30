@@ -57,6 +57,18 @@
       "extent" : "full-screen",
       "subtype" : "retina4",
       "scale" : "2x"
+    },
+    {
+      "filename" : "Load-Up Screen.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Load-Up Screen@2x.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Load-Up Screen@3x.png",
+      "unassigned" : true
     }
   ],
   "info" : {
