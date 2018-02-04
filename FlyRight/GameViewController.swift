@@ -11,6 +11,8 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
+var gameViewController: GameViewController = GameViewController()
+
 class GameViewController: UIViewController {
 
     // This outlet counts number of turns to factor into the score.
@@ -27,7 +29,7 @@ class GameViewController: UIViewController {
 
     // Variable of gameOverViewController to call showGameOver()
     var gameOverViewController: GameOverViewController!
-
+    
     //This method will update any labels with appropriate values.
     func updateLabels() {
         tilesLabel.text = String(format: "%ld", Level.tiles)
@@ -129,14 +131,16 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Configure the view.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
-
+        
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
+        
+        scene.gameViewController = self
 
         // Load the level.
         level = Level(filename: "Level_1", scene: scene)

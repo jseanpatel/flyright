@@ -78,10 +78,6 @@ class GameScene: SKScene {
             currTime = Date()
         }
     }
- 
-    func refreshGame() {
-        self.gameViewController.refreshGame()
-    }
     
     func shuffle() {
         removeAllSpaces()

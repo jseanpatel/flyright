@@ -14,8 +14,6 @@ class GameOverViewController: UIViewController {
 
     var scene: GameOverScene!
     
-    var gameScene: GameScene
-
     // MARK: View Controller Functions
 
     override var prefersStatusBarHidden: Bool {
@@ -24,7 +22,7 @@ class GameOverViewController: UIViewController {
 
     @IBAction func restartGame(_ sender: Any) {
        self.removeAnimate()
-       gameScene.refreshGame()
+       gameViewController.refreshGame()
     }
     
     override var shouldAutorotate: Bool {
