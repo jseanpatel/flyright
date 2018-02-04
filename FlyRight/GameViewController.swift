@@ -101,10 +101,9 @@ class GameViewController: UIViewController {
 
     func setUpLevel() {
         super.viewDidLoad()
-        
         // Configure the view.
-        let skView = view as! SKView
-        skView.isMultipleTouchEnabled = false
+        print("Going to sul")
+        let skView = self.view as! SKView
         
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
@@ -128,12 +127,16 @@ class GameViewController: UIViewController {
         // Start the game.
         beginGame()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set global variable to proper object
+        gameViewController = self
+        
         // Configure the view.
-        let skView = view as! SKView
+        print("Going to vdl")
+        let skView = self.view as! SKView
         skView.isMultipleTouchEnabled = false
         
         // Create and configure the scene.
