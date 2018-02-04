@@ -8,7 +8,7 @@ extension Dictionary {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions()) as Data!
                 dataOK = data!
-                print("\(path)")
+                //print("\(path)")
             }
             catch {
                 print("Could not load level file: \(filename), error: \(error)")

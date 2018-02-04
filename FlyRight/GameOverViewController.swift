@@ -21,8 +21,8 @@ class GameOverViewController: UIViewController {
     }
 
     @IBAction func restartGame(_ sender: Any) {
-       self.removeAnimate()
-       gameViewController.refreshGame()
+        self.removeAnimate()
+        gameViewController.refreshGame()
     }
     
     override var shouldAutorotate: Bool {
