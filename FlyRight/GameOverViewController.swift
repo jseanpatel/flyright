@@ -13,10 +13,7 @@ import AVFoundation
 class GameOverViewController: UIViewController {
 
     var scene: GameOverScene!
-
-    // For recognizing gestures.
-    var tapGestureRecognizer: UITapGestureRecognizer!
-
+    
     // MARK: View Controller Functions
 
     override var prefersStatusBarHidden: Bool {
@@ -24,9 +21,10 @@ class GameOverViewController: UIViewController {
     }
 
     @IBAction func restartGame(_ sender: Any) {
-        self.removeAnimate()
+       self.removeAnimate()
+       gameViewController.refreshGame()
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
