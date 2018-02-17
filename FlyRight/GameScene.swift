@@ -43,7 +43,7 @@ extension UIImage {
 
 class GameScene: SKScene {
 
-    var gameViewController = GameViewController()
+    var gameViewController: GameViewController?
     
     // MARK: Properties
 

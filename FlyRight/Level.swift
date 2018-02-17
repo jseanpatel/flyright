@@ -18,19 +18,20 @@ var timesRun = 0
 class Level {
 
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
-    var scene: GameScene!
+    weak var scene: GameScene!
 
     // Reference to Space from Level.
     var shipRef: Space?
 
     // This var will be the running static score of how many tiles the spaceShip has flown over.
-    static var tiles: Int = 0
+    // Really you shouldn't have two variables with the same name
+    var tileCount: Int = 0
 
     // Variable to access the Space type.
     var space: Space!
 
     // This Bool will trigger the showing of the Game-Over screen.
-    static var isGameOver: Bool = false
+    var isGameOver: Bool = false
 
     // MARK: Properties
 
@@ -43,7 +44,7 @@ class Level {
     var tileCounter = 0
 
     // Variable of viewController to call showGameOver() (moved to gameOver).
-    var viewController: GameViewController!
+    weak var viewController: GameViewController!
     
     // MARK: Initialization
 
@@ -55,7 +56,7 @@ class Level {
         // turn is also an array describing the columns in that row. If a column
         // is 1, it means there is a tile at that location, 0 means there is not.
 
-        self.scene? = self.viewController.scene
+        self.scene? = scene
 
         guard let tilesArray = dictionary["tiles"] as? [[Int]] else { return }
 
@@ -103,18 +104,17 @@ class Level {
             }
         }
         //make xpos ypos
-        var spaceShip: Space
-        spaceShip = shipRef!
-        if (timesRun > 0 && !Level.isGameOver) {
-            spaceShip.move()
-            Level.tiles += 1
+
+        if (timesRun > 0 && !isGameOver) {
+            shipRef!.move()
+            tileCount += 1
             self.viewController.updateLabels()
             if !(detectAsteroid(row: ((getShipRef()?.getRow()))!, column: (getShipRef()?.getColumn())!)) {
                 addAsteroid()
             }
         }
         timesRun += 1
-        set.insert(spaceShip)
+        set.insert(shipRef!)
         return set
     }
 
@@ -129,17 +129,17 @@ class Level {
     //Checks the Dictionary to see if an Asteroid is at the given index of the spaceShip and triggers "Game Over" if so.
     func detectAsteroid(row: Int, column: Int) -> Bool {
         if ((column < NumColumns - NumColumns) || (column >= NumColumns)) {
-            Level.isGameOver = true
+            isGameOver = true
             self.viewController.gameOver()
             return true
         }
         if ((row < NumRows - NumRows) || (row >= NumRows)) {
-            Level.isGameOver = true
+            isGameOver = true
             self.viewController.gameOver()
             return true
         }
         if (tiles[column, row] != nil) {
-            Level.isGameOver = true
+            isGameOver = true
             self.viewController.gameOver()
             return true
         }
@@ -156,8 +156,8 @@ class Level {
 
     // UPDATE THIS JACOB
     // This method will recalculate the score at the restart of the game.
-    static func calculateScore() {
-        tiles = 0
+    func calculateScore() {
+        tileCount = 0
     }
 
     // MARK: Query the level

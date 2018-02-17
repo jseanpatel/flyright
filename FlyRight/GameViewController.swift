@@ -11,8 +11,6 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-var gameViewController: GameViewController = GameViewController()
-
 class GameViewController: UIViewController {
 
     // This outlet counts number of turns to factor into the score.
@@ -32,7 +30,7 @@ class GameViewController: UIViewController {
     
     //This method will update any labels with appropriate values.
     func updateLabels() {
-        tilesLabel.text = String(format: "%ld", Level.tiles)
+        tilesLabel.text = String(format: "%ld", scene.level.tileCount)
         turnLabel.text = String(format: "%ld", turns)
         //here the genScore() func is dynamically called to continually update the displayed total score
         scoreLabel.text = String(format: "%ld", genScore())
@@ -40,7 +38,7 @@ class GameViewController: UIViewController {
 
     // This func will correctly relate the turns and tiles to generate a score.
     func genScore() -> Int {
-        return (Level.tiles * 4 / 10) * (turns * 12 / 10) * 10
+        return (scene.level.tileCount * 4 / 10) * (turns * 12 / 10) * 10
     }
 
     // The outlet to make a turn.
@@ -51,13 +49,14 @@ class GameViewController: UIViewController {
 
     //End the game and transition over the GameOverViewController.
     func gameOver() {
-
         let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
-        self.addChildViewController(gameOverVC)
+        gameOverVC.gVC = self
+        gameOverVC.view.tag = 100
         gameOverVC.view.frame = self.view.frame
+        
+        self.addChildViewController(gameOverVC)
         self.view.addSubview(gameOverVC.view)
         gameOverVC.didMove(toParentViewController: self)
-
     }
     
     // Reset all labels to 0 when restarting game.
@@ -131,9 +130,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set global variable to proper object
-        gameViewController = self
-        
         // Configure the view.
         print("Going to vdl")
         let skView = self.view as! SKView
@@ -173,6 +169,7 @@ class GameViewController: UIViewController {
         // Fill up the level with new spaces, and create sprites for them.
         let newSpace = level.shuffle()
         scene.addSprites(for: newSpace)
+        print("here")
         resetLabels()
     }
 
