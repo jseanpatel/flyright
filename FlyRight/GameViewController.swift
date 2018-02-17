@@ -169,7 +169,6 @@ class GameViewController: UIViewController {
         // Fill up the level with new spaces, and create sprites for them.
         let newSpace = level.shuffle()
         scene.addSprites(for: newSpace)
-        print("here")
         resetLabels()
     }
 
