@@ -12,6 +12,7 @@ import AVFoundation
 
 class GameOverViewController: UIViewController {
 
+    weak var gVC: GameViewController!
     var scene: GameOverScene!
     
     // MARK: View Controller Functions
@@ -22,7 +23,11 @@ class GameOverViewController: UIViewController {
 
     @IBAction func restartGame(_ sender: Any) {
         self.removeAnimate()
-        gameViewController.refreshGame()
+        if self.view.isDescendant(of: gVC.view) {
+            self.view.removeFromSuperview()
+        }
+        self.removeFromParentViewController()
+        gVC.refreshGame()
     }
     
     override var shouldAutorotate: Bool {
