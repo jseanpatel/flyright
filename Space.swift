@@ -70,7 +70,7 @@ class Space: CustomStringConvertible, Hashable {
     
     init(spaceType: SpaceType) {
         self.spaceType = spaceType
-        row = 0
+        row = -1
         column = 0
     }
 

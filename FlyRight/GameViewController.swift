@@ -103,7 +103,7 @@ class GameViewController: UIViewController {
         // Configure the view.
         print("Going to sul")
         let skView = self.view as! SKView
-        
+       
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
@@ -144,7 +144,7 @@ class GameViewController: UIViewController {
         // Load the level.
         level = Level(filename: "Level_1", scene: scene)
         scene.level = level
-        level.viewController = self
+        level.viewController = self 
 
         scene.addTiles()
 
