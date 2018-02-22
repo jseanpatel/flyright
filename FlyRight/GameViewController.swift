@@ -28,6 +28,14 @@ class GameViewController: UIViewController {
     // Variable of gameOverViewController to call showGameOver()
     var gameOverViewController: GameOverViewController!
     
+    // Variable to keep track of score.
+    var score : Int = 0
+    
+    // Allow access of scores for highscores.
+    func getHighScore() -> Int {
+        return score
+    }
+    
     //This method will update any labels with appropriate values.
     func updateLabels() {
         tilesLabel.text = String(format: "%ld", scene.level.tileCount)
@@ -38,7 +46,8 @@ class GameViewController: UIViewController {
 
     // This func will correctly relate the turns and tiles to generate a score.
     func genScore() -> Int {
-        return (scene.level.tileCount * 4 / 10) * (turns * 12 / 10) * 10
+        var score = (scene.level.tileCount * 4 / 10) * (turns * 12 / 10) * 10
+        return score
     }
 
     // The outlet to make a turn.
@@ -62,6 +71,8 @@ class GameViewController: UIViewController {
     // Reset all labels to 0 when restarting game.
     func resetLabels() {
         tilesLabel.text = String(format: "%ld", 0)
+        //reinitialize turns to 0
+        turns = 0
         turnLabel.text = String(format: "%ld", 0)
         //here the genScore() func is dynamically called to continually update the displayed total score
         scoreLabel.text = String(format: "%ld", 0)
