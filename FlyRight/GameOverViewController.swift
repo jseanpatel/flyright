@@ -20,7 +20,7 @@ class GameOverViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
     @IBAction func restartGame(_ sender: Any) {
         self.removeAnimate()
         if self.view.isDescendant(of: gVC.view) {
@@ -32,10 +32,6 @@ class GameOverViewController: UIViewController {
     
     override var shouldAutorotate: Bool {
         return true
-    }
-
-    @IBAction func moveToGame(_ sender: Any) {
-        self.performSegue(withIdentifier: "toGameSegue", sender: nil)
     }
 
     @IBAction func moveToMenu(_ sender: Any) {

@@ -42,6 +42,7 @@ class GameViewController: UIViewController {
         turnLabel.text = String(format: "%ld", turns)
         //here the genScore() func is dynamically called to continually update the displayed total score
         scoreLabel.text = String(format: "%ld", genScore())
+        
     }
 
     // This func will correctly relate the turns and tiles to generate a score.
