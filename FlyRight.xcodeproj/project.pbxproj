@@ -19,6 +19,8 @@
 		F515A36E1F0B404500541422 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A36D1F0B404500541422 /* Level.swift */; };
 		F515A3721F148D9C00541422 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A3711F148D9C00541422 /* Tile.swift */; };
 		F515A3741F1490AB00541422 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A3731F1490AB00541422 /* Extensions.swift */; };
+		F55973BF205602C8000FB69A /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973BE205602C7000FB69A /* OptionsScene.swift */; };
+		F55973C1205602CA000FB69A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C0205602CA000FB69A /* OptionsViewController.swift */; };
 		F57D316D1FFF4D1900305849 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D316C1FFF4D1900305849 /* MenuViewController.swift */; };
 		F57D316F1FFF637B00305849 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D316E1FFF637B00305849 /* MenuScene.swift */; };
 		F57D31732000A12D00305849 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31722000A12D00305849 /* GameOverViewController.swift */; };
@@ -40,6 +42,8 @@
 		F515A36D1F0B404500541422 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		F515A3711F148D9C00541422 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		F515A3731F1490AB00541422 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F55973BE205602C7000FB69A /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
+		F55973C0205602CA000FB69A /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		F57D316C1FFF4D1900305849 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
 		F57D316E1FFF637B00305849 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		F57D31722000A12D00305849 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -91,10 +95,21 @@
 				F515A3411F087A4900541422 /* Info.plist */,
 				F515A33E1F087A4900541422 /* LaunchScreen.storyboard */,
 				F515A3391F087A4900541422 /* Main.storyboard */,
+				F55973C22056035F000FB69A /* Menu Related */,
 				E2E805C31F400EFA00CFC795 /* Level_1.json */,
 				F515A33C1F087A4900541422 /* Assets.xcassets */,
 			);
 			path = FlyRight;
+			sourceTree = "<group>";
+		};
+		F55973C22056035F000FB69A /* Menu Related */ = {
+			isa = PBXGroup;
+			children = (
+				F55973C0205602CA000FB69A /* OptionsViewController.swift */,
+				F55973BE205602C7000FB69A /* OptionsScene.swift */,
+			);
+			name = "Menu Related";
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +189,8 @@
 			files = (
 				F515A36E1F0B404500541422 /* Level.swift in Sources */,
 				F515A3361F087A4900541422 /* GameScene.swift in Sources */,
+				F55973BF205602C8000FB69A /* OptionsScene.swift in Sources */,
+				F55973C1205602CA000FB69A /* OptionsViewController.swift in Sources */,
 				F515A3381F087A4900541422 /* GameViewController.swift in Sources */,
 				F515A3741F1490AB00541422 /* Extensions.swift in Sources */,
 				F57D316D1FFF4D1900305849 /* MenuViewController.swift in Sources */,

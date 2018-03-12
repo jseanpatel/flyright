@@ -2,18 +2,18 @@
 //  GameViewController.swift
 //  FlyRight
 //
-//  Created by Jacob Patel on 1/4/18.
+//  Created by Jacob Patel on 3/3/18.
 //  Copyright © 2017 Jacob Patel. All rights reserved.
 //
 import UIKit
 import SpriteKit
 import AVFoundation
 
-class MenuViewController: UIViewController {
-    
+class OptionsViewController: UIViewController {
+
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
-    var scene: MenuScene!
-    
+    var scene: OptionsScene!
+
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
 
@@ -26,14 +26,7 @@ class MenuViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
-    
-    @IBAction func moveToGame(_ sender: Any) {
-        self.performSegue(withIdentifier: "toGameSegue", sender: nil)
-    }
-    
-    @IBAction func moveToOptions(_ sender: Any) {
-        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
-    }
+
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
     }
@@ -41,18 +34,18 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Configure the view.
-        let skView = view as! SKView
-        skView.isMultipleTouchEnabled = false
-        
-        // Create and configure the scene.
-        scene = MenuScene(size: skView.bounds.size)
-        scene.scaleMode = .aspectFill
-        
-        // Present the scene.
-        skView.presentScene(scene)
+
+            // Configure the view.
+            let skView = view as! SKView
+            skView.isMultipleTouchEnabled = false
+
+            // Create and configure the scene.
+            scene = OptionsScene(size: skView.bounds.size)
+            scene.scaleMode = .aspectFill
+
+            // Present the scene.
+            skView.presentScene(scene)
 
     }
 }
-
 
