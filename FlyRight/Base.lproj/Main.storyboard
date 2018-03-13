@@ -45,12 +45,21 @@
                                             <action selector="moveToOptions:" destination="8vk-Xo-ocY" eventType="touchUpInside" id="sVt-kR-VDf"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" image="Credits Button" translatesAutoresizingMaskIntoConstraints="NO" id="src-2f-z62">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sv-TZ-xHb">
                                         <rect key="frame" x="0.0" y="170" width="285" height="60"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" image="Records Button" translatesAutoresizingMaskIntoConstraints="NO" id="Tts-F7-VGR">
+                                        <state key="normal" backgroundImage="Credits Button"/>
+                                        <connections>
+                                            <action selector="moveToCredits:" destination="8vk-Xo-ocY" eventType="touchUpInside" id="6Oe-aJ-jfc"/>
+                                            <segue destination="CFi-fF-Npp" kind="show" identifier="toCreditsSegue" id="nv8-7F-Y5k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdS-AT-jR1">
                                         <rect key="frame" x="0.0" y="255" width="285" height="60"/>
-                                    </imageView>
+                                        <state key="normal" image="Records Button"/>
+                                        <connections>
+                                            <action selector="moveToRecords:" destination="8vk-Xo-ocY" eventType="touchUpInside" id="GeO-Ir-7Pa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -59,11 +68,12 @@
                     <connections>
                         <segue destination="BV1-FR-VrT" kind="showDetail" identifier="toGameSegue" action="showViewController:sender:" id="gtO-vl-KFV"/>
                         <segue destination="c4A-kT-SUA" kind="show" identifier="toOptionsSegue" id="BZG-AW-Qta"/>
+                        <segue destination="idw-jv-Zkl" kind="show" identifier="toRecordsSegue" id="Lvx-ke-ia6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3K-EZ-0s3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549.375" y="111.97183098591549"/>
+            <point key="canvasLocation" x="-534" y="98"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="ycC-6j-mRO">
@@ -81,7 +91,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehq-Zx-vOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-405" y="950"/>
+            <point key="canvasLocation" x="-1311" y="934"/>
+        </scene>
+        <!--Credits View Controller-->
+        <scene sceneID="H8Q-uU-nKm">
+            <objects>
+                <viewController id="CFi-fF-Npp" customClass="CreditsViewController" customModule="FlyRight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dd6-HZ-MD3"/>
+                        <viewControllerLayoutGuide type="bottom" id="aUP-1C-3ci"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="creditsID" id="kPP-qt-odl" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iF1-7q-h2D">
+                                <rect key="frame" x="89" y="144" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HighScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc2-k9-c7U">
+                                <rect key="frame" x="74" y="28" width="172" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9x-L4-rIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="934"/>
+        </scene>
+        <!--Records View Controller-->
+        <scene sceneID="or8-18-Ouh">
+            <objects>
+                <viewController id="idw-jv-Zkl" customClass="RecordsViewController" customModule="FlyRight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ife-5s-ITU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ks2-8k-QeL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Os-zZ-I6p" customClass="SKView" customModule="FlyRight" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgS-I7-Rl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="934"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
