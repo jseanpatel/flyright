@@ -32,8 +32,18 @@ class GameViewController: UIViewController {
     var score : Int = 0
     
     // Allow access of scores for highscores.
-    func getHighScore() -> Int {
+    func getScore() -> Int {
         return score
+    }
+    
+    // Allow acces of tiles for highscores.
+    func getTiles() -> Int {
+        return scene.level.tileCount
+    }
+    
+    // Allow access for turns for highScores
+    func getTurns() -> Int {
+        return turns
     }
     
     //This method will update any labels with appropriate values.

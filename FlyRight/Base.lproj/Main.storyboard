@@ -112,14 +112,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HighScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc2-k9-c7U">
-                                <rect key="frame" x="74" y="28" width="172" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -139,12 +131,21 @@
                     <view key="view" contentMode="scaleToFill" id="7Os-zZ-I6p" customClass="SKView" customModule="FlyRight" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-hT-7bh">
+                                <rect key="frame" x="34" y="72" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgS-I7-Rl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="315" y="934"/>
+            <point key="canvasLocation" x="315" y="933.80281690140851"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -187,7 +188,7 @@
                                         <rect key="frame" x="101" y="0.0" width="69" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-Rp-FT8">
-                                                <rect key="frame" x="1" y="0.0" width="67.5" height="20"/>
+                                                <rect key="frame" x="0.5" y="0.0" width="67.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="GillSans-UltraBold" family="Gill Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.90588235294117647" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -258,34 +259,37 @@
                             <view contentMode="scaleToFill" restorationIdentifier="gameOverID" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-2p-vB1">
                                 <rect key="frame" x="40" y="200" width="240" height="168"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZv-Zy-e7p">
-                                        <rect key="frame" x="8" y="128" width="206" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <state key="normal" title="Menu Button" image="Menu Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZv-Zy-e7p">
+                                        <rect key="frame" x="8" y="133" width="102" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="jJk-wk-s73"/>
+                                        </constraints>
+                                        <state key="normal" title="GOVC Menu Button" image="Menu Button"/>
                                         <connections>
                                             <action selector="moveToMenu:" destination="sqg-43-vcV" eventType="touchUpInside" id="Tru-Ak-Uou"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="GOVC Options Button" translatesAutoresizingMaskIntoConstraints="NO" id="VeE-wq-YWY">
-                                        <rect key="frame" x="130" y="128" width="102" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                    </imageView>
-                                    <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-Vw-dDi">
-                                        <rect key="frame" x="25" y="46" width="191" height="76"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="CPt-P3-bs4"/>
-                                            <constraint firstAttribute="height" constant="80" id="NjF-ZC-Qsd"/>
-                                        </constraints>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-Vw-dDi">
+                                        <rect key="frame" x="20" y="44" width="200" height="80"/>
                                         <state key="normal" title="Game Over Button" image="Game Over Button"/>
                                         <connections>
                                             <action selector="restartGame:" destination="sqg-43-vcV" eventType="touchUpInside" id="IV5-n4-O2v"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="GOVC Options Button" translatesAutoresizingMaskIntoConstraints="NO" id="VeE-wq-YWY">
+                                        <rect key="frame" x="130" y="133" width="102" height="27"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="qBt-Vw-dDi" secondAttribute="bottom" constant="100" id="44a-07-6Xa"/>
-                                    <constraint firstItem="qBt-Vw-dDi" firstAttribute="centerX" secondItem="8ua-2p-vB1" secondAttribute="centerX" id="sEw-wh-S5E"/>
+                                    <constraint firstItem="WZv-Zy-e7p" firstAttribute="top" secondItem="qBt-Vw-dDi" secondAttribute="bottom" constant="9" id="5lJ-uI-e6f"/>
+                                    <constraint firstItem="VeE-wq-YWY" firstAttribute="trailing" secondItem="8ua-2p-vB1" secondAttribute="trailingMargin" id="Cwx-GU-n1E"/>
+                                    <constraint firstItem="qBt-Vw-dDi" firstAttribute="centerY" secondItem="8ua-2p-vB1" secondAttribute="centerY" id="Dto-4z-1Lf"/>
+                                    <constraint firstItem="WZv-Zy-e7p" firstAttribute="top" secondItem="VeE-wq-YWY" secondAttribute="top" id="NXK-l0-m0K"/>
+                                    <constraint firstItem="WZv-Zy-e7p" firstAttribute="bottom" secondItem="8ua-2p-vB1" secondAttribute="bottomMargin" id="R4e-ro-hzG"/>
+                                    <constraint firstItem="qBt-Vw-dDi" firstAttribute="centerX" secondItem="8ua-2p-vB1" secondAttribute="centerX" id="Tdf-62-tO7"/>
+                                    <constraint firstItem="WZv-Zy-e7p" firstAttribute="leading" secondItem="8ua-2p-vB1" secondAttribute="leadingMargin" id="ToW-tM-m0m"/>
+                                    <constraint firstItem="qBt-Vw-dDi" firstAttribute="leading" secondItem="8ua-2p-vB1" secondAttribute="leading" constant="20" id="q3L-7R-DiA"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -297,10 +301,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UXc-l0-7b1" firstAttribute="top" secondItem="8ua-2p-vB1" secondAttribute="bottom" constant="200" id="3t0-Wg-MEV"/>
-                            <constraint firstItem="8ua-2p-vB1" firstAttribute="leading" secondItem="a8h-Lu-uSz" secondAttribute="leadingMargin" constant="24" id="lbf-fZ-GHe"/>
-                            <constraint firstItem="8ua-2p-vB1" firstAttribute="top" secondItem="0iN-oE-o5U" secondAttribute="bottom" constant="180" id="oqf-Db-WAz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8ua-2p-vB1" secondAttribute="trailing" constant="24" id="p28-a7-xUr"/>
+                            <constraint firstItem="8ua-2p-vB1" firstAttribute="top" secondItem="0iN-oE-o5U" secondAttribute="bottom" constant="180" id="IPj-YZ-nh1"/>
+                            <constraint firstItem="8ua-2p-vB1" firstAttribute="centerX" secondItem="a8h-Lu-uSz" secondAttribute="centerX" id="aOg-qN-o5m"/>
+                            <constraint firstItem="8ua-2p-vB1" firstAttribute="leading" secondItem="a8h-Lu-uSz" secondAttribute="leadingMargin" constant="24" id="fQb-3D-1IU"/>
+                            <constraint firstItem="8ua-2p-vB1" firstAttribute="centerY" secondItem="a8h-Lu-uSz" secondAttribute="centerY" id="qcB-ME-Jkq"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -311,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLr-Rg-h3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190.625" y="122.53521126760563"/>
+            <point key="canvasLocation" x="1188.75" y="121.47887323943662"/>
         </scene>
     </scenes>
     <resources>
