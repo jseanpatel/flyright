@@ -86,8 +86,24 @@
                     <view key="view" contentMode="scaleToFill" id="khF-eK-8s7" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaT-LU-MpW">
+                                <rect key="frame" x="7" y="8" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NavigMenuButton"/>
+                                <connections>
+                                    <action selector="moveToMenu:" destination="Vpg-82-Ld1" eventType="touchUpInside" id="02B-9Y-2gY"/>
+                                    <action selector="moveToMenu:" destination="CFi-fF-Npp" eventType="touchUpInside" id="4JY-S2-qNZ"/>
+                                    <action selector="moveToMenu:" destination="c4A-kT-SUA" eventType="touchUpInside" id="IIv-au-QYo"/>
+                                    <action selector="moveToMenu:" destination="idw-jv-Zkl" eventType="touchUpInside" id="r6y-uL-P5N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="8vk-Xo-ocY" kind="show" identifier="toMenuSegue" id="a4d-kG-H0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehq-Zx-vOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,20 +121,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iF1-7q-h2D">
-                                <rect key="frame" x="89" y="144" width="142" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PFR-Ar-RmG">
+                                <rect key="frame" x="40" y="73" width="240" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-Ra-9aV">
+                                <rect key="frame" x="6" y="7" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NavigMenuButton"/>
+                                <connections>
+                                    <action selector="moveToMenu:" destination="Vpg-82-Ld1" eventType="touchUpInside" id="4rK-KX-H2B"/>
+                                    <action selector="moveToMenu:" destination="CFi-fF-Npp" eventType="touchUpInside" id="PgH-Hq-Yqa"/>
+                                    <action selector="moveToMenu:" destination="idw-jv-Zkl" eventType="touchUpInside" id="jCi-uc-YRg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="8vk-Xo-ocY" kind="show" identifier="toMenuSegue" id="RN6-Rr-t1s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9x-L4-rIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vpg-82-Ld1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-506" y="934"/>
+            <point key="canvasLocation" x="-506.25" y="933.80281690140851"/>
         </scene>
         <!--Records View Controller-->
         <scene sceneID="or8-18-Ouh">
@@ -128,24 +158,28 @@
                         <viewControllerLayoutGuide type="top" id="ife-5s-ITU"/>
                         <viewControllerLayoutGuide type="bottom" id="ks2-8k-QeL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7Os-zZ-I6p" customClass="SKView" customModule="FlyRight" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="7Os-zZ-I6p" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-hT-7bh">
-                                <rect key="frame" x="34" y="72" width="175" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-8Q-0by">
+                                <rect key="frame" x="6" y="7" width="100" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" image="NavigMenuButton"/>
+                                <connections>
+                                    <action selector="moveToMenu:" destination="idw-jv-Zkl" eventType="touchUpInside" id="218-WA-rgK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="8vk-Xo-ocY" kind="show" identifier="toMenuSegue" id="pHf-gC-8i8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgS-I7-Rl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="315" y="933.80281690140851"/>
+            <point key="canvasLocation" x="332" y="934"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -324,10 +358,14 @@
         <image name="GOVC Options Button" width="102" height="27"/>
         <image name="Game Over Button" width="200" height="80"/>
         <image name="Menu Button" width="102" height="27"/>
+        <image name="NavigMenuButton" width="100" height="25"/>
         <image name="Options" width="285" height="60"/>
         <image name="Play Button" width="285" height="60"/>
         <image name="Records Button" width="285" height="60"/>
         <image name="Scoreboard" width="282" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a4d-kG-H0a"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>

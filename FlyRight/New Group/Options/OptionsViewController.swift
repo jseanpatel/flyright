@@ -31,20 +31,25 @@ class OptionsViewController: UIViewController {
         return [.portrait, .portraitUpsideDown]
     }
 
+    @IBAction func moveToMenu(_ sender: Any) {
+        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
-            // Configure the view.
-            let skView = view as! SKView
-            skView.isMultipleTouchEnabled = false
 
-            // Create and configure the scene.
-            scene = OptionsScene(size: skView.bounds.size)
-            scene.scaleMode = .aspectFill
+        // Configure the view.
+        let skView = view as! SKView
+        skView.isMultipleTouchEnabled = false
 
-            // Present the scene.
-            skView.presentScene(scene)
+        // Create and configure the scene.
+        scene = OptionsScene(size: skView.bounds.size)
+        scene.scaleMode = .aspectFill
+
+        // Present the scene.
+        skView.presentScene(scene)
 
     }
 }

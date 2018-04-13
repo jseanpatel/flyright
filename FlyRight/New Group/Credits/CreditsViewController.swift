@@ -27,6 +27,12 @@ class CreditsViewController: UIViewController {
         return true
     }
     
+    @IBAction func moveToMenu(_ sender: Any) {
+        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+    }
+    
+    
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
     }

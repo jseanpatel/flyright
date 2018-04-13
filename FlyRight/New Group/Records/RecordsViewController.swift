@@ -31,6 +31,11 @@ class RecordsViewController: UIViewController {
         return [.portrait, .portraitUpsideDown]
     }
     
+    @IBAction func moveToMenu(_ sender: Any) {
+        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
