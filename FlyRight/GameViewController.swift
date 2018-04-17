@@ -12,7 +12,7 @@ import SpriteKit
 import AVFoundation
 
 class GameViewController: UIViewController {
-
+    
     // This outlet counts number of turns to factor into the score.
     @IBOutlet weak var turnLabel: UILabel!
 
@@ -21,25 +21,24 @@ class GameViewController: UIViewController {
 
     // This outlet will periodically calculate scores using the vales of tilesLabel and turnLabel.
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    // Reference for getting and setting records.
+    weak var recordsVC: RecordsViewController!
 
     // This var will be a running count of all turns.
     var turns: Int = 0
 
-    // Variable of gameOverViewController to call showGameOver()
+    // Variable of gameOverViewController to call showGameOver().
     var gameOverViewController: GameOverViewController!
     
     // Variable to keep track of score.
     var score : Int = 0
     
-    // Allow access of scores for highscores.
-    func getScore() -> Int {
-        return score
-    }
+    // Variable to keep track of tiles.
+    var tiles: Int = 0
     
-    // Allow acces of tiles for highscores.
-    func getTiles() -> Int {
-        return scene.level.tileCount
-    }
+    // Shortened reference to userDefaults.
+    let defaults = UserDefaults.standard
     
     // Allow access for turns for highScores
     func getTurns() -> Int {
@@ -48,16 +47,22 @@ class GameViewController: UIViewController {
     
     //This method will update any labels with appropriate values.
     func updateLabels() {
-        tilesLabel.text = String(format: "%ld", scene.level.tileCount)
+        tilesLabel.text = String(format: "%ld", getNumTiles())
         turnLabel.text = String(format: "%ld", turns)
         //here the genScore() func is dynamically called to continually update the displayed total score
         scoreLabel.text = String(format: "%ld", genScore())
         
     }
+    
+    // This func sets the amout of tiles and then returns that number.
+    func getNumTiles() -> Int {
+    tiles = scene.level.tileCount
+        return tiles
+    }
 
     // This func will correctly relate the turns and tiles to generate a score.
     func genScore() -> Int {
-        var score = (scene.level.tileCount * 4 / 10) * (turns * 12 / 10) * 10
+        score = (scene.level.tileCount * 4 / 10) * (turns * 12 / 10) * 10
         return score
     }
 
@@ -77,6 +82,31 @@ class GameViewController: UIViewController {
         self.addChildViewController(gameOverVC)
         self.view.addSubview(gameOverVC.view)
         gameOverVC.didMove(toParentViewController: self)
+        
+        // Check for new records.
+       compHighScores()
+    }
+    
+    // A method that checks if the current class variables of the finished game are larger than the high scores.
+    func compHighScores() {
+        
+        // Submit new scores for comparison from the recently finished game.
+        defaults.set(tiles, forKey: "newTiles")
+        defaults.set(score, forKey: "newScore")
+        defaults.set(turns, forKey: "newTurns")
+        
+        // Compare stored and new values.
+        if (defaults.integer(forKey: "newTiles") > defaults.integer(forKey: "tiles")) {
+            defaults.set(defaults.integer(forKey: "newTiles"), forKey: "tiles")
+        }
+        
+        if (defaults.integer(forKey: "newScore") > defaults.integer(forKey: "score")) {
+            defaults.set(defaults.integer(forKey: "newScore"), forKey: "score")
+        }
+        
+        if (defaults.integer(forKey: "newTurns") > defaults.integer(forKey: "turns")) {
+            defaults.set(defaults.integer(forKey: "newTurns"), forKey: "turns")
+        }
     }
     
     // Reset all labels to 0 when restarting game.
@@ -123,7 +153,6 @@ class GameViewController: UIViewController {
     func setUpLevel() {
         super.viewDidLoad()
         // Configure the view.
-        print("Going to sul")
         let skView = self.view as! SKView
        
         // Create and configure the scene.
@@ -153,7 +182,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // Configure the view.
-        print("Going to vdl")
         let skView = self.view as! SKView
         skView.isMultipleTouchEnabled = false
         
