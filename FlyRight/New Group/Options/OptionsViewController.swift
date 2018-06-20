@@ -31,6 +31,13 @@ class OptionsViewController: UIViewController {
         return [.portrait, .portraitUpsideDown]
     }
 
+    // Must be touched multiple times to records to original values.
+    @IBAction func resetRecords(_ sender: Any) {
+        UserDefaults.standard.set(0, forKey: "tiles")
+        UserDefaults.standard.set(0, forKey: "score")
+        UserDefaults.standard.set(0, forKey: "turns")
+    }
+    
     @IBAction func moveToMenu(_ sender: Any) {
         self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
     }

@@ -58,7 +58,7 @@ class RecordsViewController: UIViewController {
         updateLabels()
 
         // Check if its the first launch to set default UserDefault values.
-        UserDefaults.isFirstLaunch()
+        UserDefaults.isFirstLaunchRecords()
 
         // Configure the view.
         let skView = view as! SKView
@@ -78,18 +78,19 @@ class RecordsViewController: UIViewController {
 extension UserDefaults {
 
     // Check for is first launch - only true on first invocation after app install, false on all further invocations.
-    static func isFirstLaunch() {
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+    static func isFirstLaunchRecords() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBeforeRecords")
         if launchedBefore {
-            print("Not first launch.")
+            print("Not first launch in Records.")
         } else {
             print("First launch, setting UserDefault.")
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            UserDefaults.standard.set(true, forKey: "launchedBeforeRecords")
 
             // Now set all the defaults values for the game.
             UserDefaults.standard.set(0, forKey: "tiles")
             UserDefaults.standard.set(0, forKey: "score")
             UserDefaults.standard.set(0, forKey: "turns")
+            
         }
     }
 }
