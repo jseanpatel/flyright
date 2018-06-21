@@ -76,15 +76,40 @@ extension UserDefaults {
 
     // Check for is first launch - only true on first invocation after app install, false on all further invocations.
     static func isFirstLaunchMenu() {
-
+        
         let launchedBeforeMenu = UserDefaults.standard.bool(forKey: "launchedBeforeMenu")
         if launchedBeforeMenu {
             if (UserDefaults.standard.bool(forKey: "shouldPlay")) {
-                let audioPlayerDict = UserDefaults.standard.value(forKey: "players") as? NSDictionary
-                let audioPlayer = audioPlayerDict!["one"] as? AVAudioPlayer
-                if !((audioPlayer?.isPlaying)!) {
-                    audioPlayer?.play()
+                if !(UserDefaults.standard.bool(forKey: "isPlaying")) {
+                    
+                    // Set path to music.
+                    let url = Bundle.main.url(forResource: "Chimera", withExtension: "mp3")
+                    
+                    // Instantiate the musicPlayer object and catch errors if they arise.
+                    do {
+                        audioPlayer = try AVAudioPlayer(contentsOf: url!)
+                        audioPlayer.prepareToPlay()
+                    } catch let error as NSError {
+                        print(error.debugDescription)
+                    }
+                    audioPlayer.numberOfLoops = -1
+                    
+                  //  if (UserDefaults.standard.integer(forKey: "start") != 0) {
+                    //audioPlayer.play(atTime: TimeInterval(UserDefaults.standard.integer(forKey: "stoppedAt")))
+                   // } else {
+                    print("here")
+                        audioPlayer.play()
+                  //  }
+                    UserDefaults.standard.set(true, forKey: "isPlaying")
                 }
+            } else {
+                /**
+                if !(UserDefaults.standard.bool(forKey: "isPlaying")) {
+                audioPlayer.pause()
+                var time = audioPlayer.currentTime
+                UserDefaults.standard.set(time, forKey: "start")
+                }
+ */
             }
         } else {
             
@@ -98,10 +123,10 @@ extension UserDefaults {
             } catch let error as NSError {
                 print(error.debugDescription)
             }
-    
-    
-            let players = ["one": audioPlayer]
-            UserDefaults.standard.set(players, forKey: "players")
+            audioPlayer.numberOfLoops = -1
+            
+            // Set the starting time which will be changed later to account for pauses.
+            UserDefaults.standard.set(0, forKey: "start")
 
             print("First launch, setting UserDefault.")
             UserDefaults.standard.set(true, forKey: "launchedBeforeMenu")
@@ -111,9 +136,10 @@ extension UserDefaults {
             audioPlayer.play()
             audioPlayer.numberOfLoops = -1
             UserDefaults.standard.set(true, forKey: "isPlaying")
-
         }
     }
 }
+
+
 
 

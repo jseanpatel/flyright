@@ -19,6 +19,25 @@ class OptionsViewController: UIViewController {
 
     // MARK: View Controller Functions
 
+    @IBAction func controlMusic(_ sender: Any) {
+        if ((sender as AnyObject).isOn) {
+            print("on")
+            UserDefaults.standard.set(true, forKey: "shouldPlay")
+            UserDefaults.standard.set(false, forKey: "isPlaying")
+            UserDefaults.isFirstLaunchMenu()
+        } else {
+            print("off")
+            UserDefaults.standard.set(false, forKey: "shouldPlay")
+            UserDefaults.standard.set(false, forKey: "isPlaying")
+            UserDefaults.isFirstLaunchMenu()
+        }
+    }
+    
+ 
+    
+    @IBAction func controlSoundEffects(_ sender: Any) {
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
