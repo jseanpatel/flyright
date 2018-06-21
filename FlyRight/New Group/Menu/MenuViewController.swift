@@ -101,16 +101,32 @@ extension UserDefaults {
                         audioPlayer.play()
                   //  }
                     UserDefaults.standard.set(true, forKey: "isPlaying")
+                    UserDefaults.standard.set(false, forKey: "shouldPlay")
                 }
             } else {
-                /**
-                if !(UserDefaults.standard.bool(forKey: "isPlaying")) {
-                audioPlayer.pause()
-                var time = audioPlayer.currentTime
-                UserDefaults.standard.set(time, forKey: "start")
+                let timeEnd = DispatchTime.now()
+                let difference = Double(timeEnd.uptimeNanoseconds) - UserDefaults.standard.double(forKey: "timeStart")
+                let playAt = Double(difference).truncatingRemainder(dividingBy: 77.36)
+                UserDefaults.standard.set(playAt, forKey: "playAt")
+                
+                // Set path to music.
+                let url = Bundle.main.url(forResource: "Chimera", withExtension: "mp3")
+                
+                // Instantiate the musicPlayer object and catch errors if they arise.
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: url!)
+                    audioPlayer.prepareToPlay()
+                } catch let error as NSError {
+                    print(error.debugDescription)
                 }
- */
-            }
+                audioPlayer.numberOfLoops = -1
+                
+                print("here")
+                audioPlayer.play(atTime: TimeInterval(UserDefaults.standard.double(forKey: "playAt")))
+                
+                UserDefaults.standard.set(true, forKey: "isPlaying")
+                UserDefaults.standard.set(false, forKey: "shouldPlay")
+                }
         } else {
             
             // Set path to music.
@@ -134,6 +150,11 @@ extension UserDefaults {
 
             // Play the music.
             audioPlayer.play()
+            
+            // Record the start time of the music.
+            let timeStart = Double(DispatchTime.now().uptimeNanoseconds)
+            UserDefaults.standard.set(timeStart, forKey: "timeStart")
+            
             audioPlayer.numberOfLoops = -1
             UserDefaults.standard.set(true, forKey: "isPlaying")
         }

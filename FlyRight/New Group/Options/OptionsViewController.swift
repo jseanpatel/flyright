@@ -33,8 +33,6 @@ class OptionsViewController: UIViewController {
         }
     }
     
- 
-    
     @IBAction func controlSoundEffects(_ sender: Any) {
     }
     
