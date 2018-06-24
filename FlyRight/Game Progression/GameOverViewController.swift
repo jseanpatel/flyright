@@ -21,6 +21,10 @@ class GameOverViewController: UIViewController {
         return true
     }
     
+    @IBAction func moveToOptions(_ sender: Any) {
+        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
+    }
+    
     @IBAction func restartGame(_ sender: Any) {
         self.removeAnimate()
         if self.view.isDescendant(of: gVC.view) {

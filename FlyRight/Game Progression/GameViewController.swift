@@ -21,42 +21,44 @@ class GameViewController: UIViewController {
 
     // This outlet will periodically calculate scores using the vales of tilesLabel and turnLabel.
     @IBOutlet weak var scoreLabel: UILabel!
-    
+
     // Reference for getting and setting records.
     weak var recordsVC: RecordsViewController!
+    
+    var gameAudioPlayer: AVAudioPlayer!
 
     // This var will be a running count of all turns.
     var turns: Int = 0
 
     // Variable of gameOverViewController to call showGameOver().
     var gameOverViewController: GameOverViewController!
-    
+
     // Variable to keep track of score.
-    var score : Int = 0
-    
+    var score: Int = 0
+
     // Variable to keep track of tiles.
     var tiles: Int = 0
-    
+
     // Shortened reference to userDefaults.
     let defaults = UserDefaults.standard
-    
+
     // Allow access for turns for highScores
     func getTurns() -> Int {
         return turns
     }
-    
+
     //This method will update any labels with appropriate values.
     func updateLabels() {
         tilesLabel.text = String(format: "%ld", getNumTiles())
         turnLabel.text = String(format: "%ld", turns)
         //here the genScore() func is dynamically called to continually update the displayed total score
         scoreLabel.text = String(format: "%ld", genScore())
-        
+
     }
-    
+
     // This func sets the amout of tiles and then returns that number.
     func getNumTiles() -> Int {
-    tiles = scene.level.tileCount
+        tiles = scene.level.tileCount
         return tiles
     }
 
@@ -74,41 +76,60 @@ class GameViewController: UIViewController {
 
     //End the game and transition over the GameOverViewController.
     func gameOver() {
-        let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
-        gameOverVC.gVC = self
-        gameOverVC.view.tag = 100
-        gameOverVC.view.frame = self.view.frame
         
-        self.addChildViewController(gameOverVC)
-        self.view.addSubview(gameOverVC.view)
-        gameOverVC.didMove(toParentViewController: self)
-        
-        // Check for new records.
-       compHighScores()
-    }
-    
+        // Play the game over sound.
+        if (UserDefaults.standard.bool(forKey: "shouldMakeSounds")) {
+
+                // Set path to music.
+                let url = Bundle.main.url(forResource: "Blast", withExtension: "mp3")
+
+                // Instantiate the musicPlayer object and catch errors if they arise.
+                do {
+                    gameAudioPlayer = try AVAudioPlayer(contentsOf: url!)
+                    gameAudioPlayer.prepareToPlay()
+                } catch let error as NSError {
+                    print(error.debugDescription)
+                }
+                gameAudioPlayer.volume = 0.15
+                gameAudioPlayer.play()
+
+                }
+
+            let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
+            gameOverVC.gVC = self
+            gameOverVC.view.tag = 100
+            gameOverVC.view.frame = self.view.frame
+
+            self.addChildViewController(gameOverVC)
+            self.view.addSubview(gameOverVC.view)
+            gameOverVC.didMove(toParentViewController: self)
+
+            // Check for new records.
+            compHighScores()
+        }
+
     // A method that checks if the current class variables of the finished game are larger than the high scores.
     func compHighScores() {
-        
+
         // Submit new scores for comparison from the recently finished game.
         defaults.set(tiles, forKey: "newTiles")
         defaults.set(score, forKey: "newScore")
         defaults.set(turns, forKey: "newTurns")
-        
+
         // Compare stored and new values.
         if (defaults.integer(forKey: "newTiles") > defaults.integer(forKey: "tiles")) {
             defaults.set(defaults.integer(forKey: "newTiles"), forKey: "tiles")
         }
-        
+
         if (defaults.integer(forKey: "newScore") > defaults.integer(forKey: "score")) {
             defaults.set(defaults.integer(forKey: "newScore"), forKey: "score")
         }
-        
+
         if (defaults.integer(forKey: "newTurns") > defaults.integer(forKey: "turns")) {
             defaults.set(defaults.integer(forKey: "newTurns"), forKey: "turns")
         }
     }
-    
+
     // Reset all labels to 0 when restarting game.
     func resetLabels() {
         tilesLabel.text = String(format: "%ld", 0)
@@ -123,7 +144,7 @@ class GameViewController: UIViewController {
     func refreshGame() {
         setUpLevel()
     }
-    
+
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
 
@@ -154,47 +175,47 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         // Configure the view.
         let skView = self.view as! SKView
-       
+
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
-        
+
         scene.gameViewController = self
-        
+
         // Load the level.
         level = Level(filename: "Level_1", scene: scene)
         scene.level = level
         level.viewController = self
-        
+
         scene.addTiles()
-        
+
         //Sync the starting score with the game.
         updateLabels()
-        
+
         // Present the scene.
         skView.presentScene(scene)
-        
+
         // Start the game.
         beginGame()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Configure the view.
         let skView = self.view as! SKView
         skView.isMultipleTouchEnabled = false
-        
+
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
-        
+
         scene.gameViewController = self
 
         // Load the level.
         level = Level(filename: "Level_1", scene: scene)
         scene.level = level
-        level.viewController = self 
+        level.viewController = self
 
         scene.addTiles()
 

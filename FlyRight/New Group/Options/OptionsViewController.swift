@@ -19,21 +19,37 @@ class OptionsViewController: UIViewController {
 
     // MARK: View Controller Functions
 
+    // To reference music.
+    @IBOutlet weak var controlMusic: UISwitch!
+    
+    // To reference sounds.
+    @IBOutlet weak var controlSounds: UISwitch!
+    
+    
     @IBAction func controlMusic(_ sender: Any) {
         if ((sender as AnyObject).isOn) {
             print("on")
             UserDefaults.standard.set(true, forKey: "shouldPlay")
             UserDefaults.standard.set(false, forKey: "isPlaying")
             UserDefaults.isFirstLaunchMenu()
+            UserDefaults.standard.set(false, forKey: "isPaused")
         } else {
             print("off")
             UserDefaults.standard.set(false, forKey: "shouldPlay")
             UserDefaults.standard.set(false, forKey: "isPlaying")
             UserDefaults.isFirstLaunchMenu()
+            UserDefaults.standard.set(true, forKey: "isPaused")
         }
+        UserDefaults.standard.set((sender as AnyObject).isOn, forKey: "musicSwitchState")
     }
     
     @IBAction func controlSoundEffects(_ sender: Any) {
+        if ((sender as AnyObject).isOn) {
+            UserDefaults.standard.set(true, forKey: "shouldMakeSounds")
+        } else {
+            UserDefaults.standard.set(false, forKey: "shouldMakeSounds")
+        }
+        UserDefaults.standard.set((sender as AnyObject).isOn, forKey: "soundSwitchState")
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -74,6 +90,10 @@ class OptionsViewController: UIViewController {
 
         // Present the scene.
         skView.presentScene(scene)
+        
+        // Save state of the button.
+        controlMusic.isOn =  UserDefaults.standard.bool(forKey: "musicSwitchState")
+        controlSounds.isOn = UserDefaults.standard.bool(forKey: "soundSwitchState")
 
     }
 }

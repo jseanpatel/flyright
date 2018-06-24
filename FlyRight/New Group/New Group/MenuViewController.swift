@@ -94,21 +94,13 @@ extension UserDefaults {
                     }
                     audioPlayer.numberOfLoops = -1
                     
-                  //  if (UserDefaults.standard.integer(forKey: "start") != 0) {
-                    //audioPlayer.play(atTime: TimeInterval(UserDefaults.standard.integer(forKey: "stoppedAt")))
-                   // } else {
-                    print("here")
-                        audioPlayer.play()
-                  //  }
+                    audioPlayer.play()
                     UserDefaults.standard.set(true, forKey: "isPlaying")
                     UserDefaults.standard.set(false, forKey: "shouldPlay")
                 }
             } else {
-                let timeEnd = DispatchTime.now()
-                let difference = Double(timeEnd.uptimeNanoseconds) - UserDefaults.standard.double(forKey: "timeStart")
-                let playAt = Double(difference).truncatingRemainder(dividingBy: 77.36)
-                UserDefaults.standard.set(playAt, forKey: "playAt")
                 
+                 if !(UserDefaults.standard.bool(forKey: "isPlaying")) {
                 // Set path to music.
                 let url = Bundle.main.url(forResource: "Chimera", withExtension: "mp3")
                 
@@ -122,12 +114,16 @@ extension UserDefaults {
                 audioPlayer.numberOfLoops = -1
                 
                 print("here")
-                audioPlayer.play(atTime: TimeInterval(UserDefaults.standard.double(forKey: "playAt")))
+                audioPlayer.pause()
                 
                 UserDefaults.standard.set(true, forKey: "isPlaying")
                 UserDefaults.standard.set(false, forKey: "shouldPlay")
+                    }
                 }
         } else {
+            
+            // Ensure the game is always downloaded with sounds on.
+            UserDefaults.standard.set(true, forKey: "shouldMakeSounds")
             
             // Set path to music.
             let url = Bundle.main.url(forResource: "Chimera", withExtension: "mp3")
