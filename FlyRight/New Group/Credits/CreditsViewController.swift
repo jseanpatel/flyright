@@ -8,6 +8,7 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import Firebase
 
 class CreditsViewController: UIViewController {
     
@@ -19,6 +20,8 @@ class CreditsViewController: UIViewController {
     
     // MARK: View Controller Functions
     
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -29,9 +32,13 @@ class CreditsViewController: UIViewController {
     
     @IBAction func moveToMenu(_ sender: Any) {
         self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
-    
+    @IBAction func moveToOptions(_ sender: Any) {
+        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
+         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+    }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
@@ -40,6 +47,9 @@ class CreditsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bannerView.adUnitID = ""
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
         // Configure the view.
         let skView = view as! SKView

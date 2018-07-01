@@ -8,6 +8,7 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import Firebase
 
 class RecordsViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class RecordsViewController: UIViewController {
     @IBOutlet weak var scoreHigh: UILabel!
     @IBOutlet weak var turnsHigh: UILabel!
 
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     // Shortened reference to userDefaults.
     let defaults = UserDefaults.standard
 
@@ -47,15 +50,27 @@ class RecordsViewController: UIViewController {
     }
 
     @IBAction func moveToMenu(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
 
-
+    
+    @IBAction func moveToOptions(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
+        AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Make sure high scores are current by updating labels.
         updateLabels()
+        
+        bannerView.adUnitID = ""
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
 
         // Check if its the first launch to set default UserDefault values.
         UserDefaults.isFirstLaunchRecords()

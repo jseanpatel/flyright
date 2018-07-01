@@ -12,7 +12,7 @@ import SpriteKit
 import AVFoundation
 
 class GameViewController: UIViewController {
-    
+
     // This outlet counts number of turns to factor into the score.
     @IBOutlet weak var turnLabel: UILabel!
 
@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
 
     // Reference for getting and setting records.
     weak var recordsVC: RecordsViewController!
-    
+
     var gameAudioPlayer: AVAudioPlayer!
 
     // This var will be a running count of all turns.
@@ -72,42 +72,27 @@ class GameViewController: UIViewController {
     @IBAction func turn(_ sender: UIButton) {
         level.getShipRef()?.changeDirection()
         turns += 1
+        AVAudioPlayer.playSpecAudio(audioPiece: "FlyRight", volume: 0.55)
+        
     }
 
     //End the game and transition over the GameOverViewController.
     func gameOver() {
-        
-        // Play the game over sound.
-        if (UserDefaults.standard.bool(forKey: "shouldMakeSounds")) {
 
-                // Set path to music.
-                let url = Bundle.main.url(forResource: "Blast", withExtension: "mp3")
+        AVAudioPlayer.playSpecAudio(audioPiece: "End", volume: 0.7)
 
-                // Instantiate the musicPlayer object and catch errors if they arise.
-                do {
-                    gameAudioPlayer = try AVAudioPlayer(contentsOf: url!)
-                    gameAudioPlayer.prepareToPlay()
-                } catch let error as NSError {
-                    print(error.debugDescription)
-                }
-                gameAudioPlayer.volume = 0.15
-                gameAudioPlayer.play()
+        let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
+        gameOverVC.gVC = self
+        gameOverVC.view.tag = 100
+        gameOverVC.view.frame = self.view.frame
 
-                }
+        self.addChildViewController(gameOverVC)
+        self.view.addSubview(gameOverVC.view)
+        gameOverVC.didMove(toParentViewController: self)
 
-            let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
-            gameOverVC.gVC = self
-            gameOverVC.view.tag = 100
-            gameOverVC.view.frame = self.view.frame
-
-            self.addChildViewController(gameOverVC)
-            self.view.addSubview(gameOverVC.view)
-            gameOverVC.didMove(toParentViewController: self)
-
-            // Check for new records.
-            compHighScores()
-        }
-
+        // Check for new records.
+        compHighScores()
+    }
     // A method that checks if the current class variables of the finished game are larger than the high scores.
     func compHighScores() {
 

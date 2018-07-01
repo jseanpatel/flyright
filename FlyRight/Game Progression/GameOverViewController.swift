@@ -9,11 +9,15 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import Firebase
 
 class GameOverViewController: UIViewController {
 
     weak var gVC: GameViewController!
+    
     var scene: GameOverScene!
+    
+    var interstitial: GADInterstitial!
     
     // MARK: View Controller Functions
 
@@ -23,6 +27,7 @@ class GameOverViewController: UIViewController {
     
     @IBAction func moveToOptions(_ sender: Any) {
         self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
+         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
     @IBAction func restartGame(_ sender: Any) {
@@ -32,6 +37,7 @@ class GameOverViewController: UIViewController {
         }
         self.removeFromParentViewController()
         gVC.refreshGame()
+         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
     override var shouldAutorotate: Bool {
@@ -40,12 +46,13 @@ class GameOverViewController: UIViewController {
 
     @IBAction func moveToMenu(_ sender: Any) {
         self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
     }
-
+    
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -68,6 +75,13 @@ class GameOverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let request = GADRequest()
+        interstitial.load(request)
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+        }
 
         // Transparent background for the pop-up.
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)

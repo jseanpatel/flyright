@@ -8,6 +8,7 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import Firebase
 
 class OptionsViewController: UIViewController {
 
@@ -19,22 +20,21 @@ class OptionsViewController: UIViewController {
 
     // MARK: View Controller Functions
 
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     // To reference music.
     @IBOutlet weak var controlMusic: UISwitch!
     
     // To reference sounds.
     @IBOutlet weak var controlSounds: UISwitch!
     
-    
     @IBAction func controlMusic(_ sender: Any) {
         if ((sender as AnyObject).isOn) {
-            print("on")
             UserDefaults.standard.set(true, forKey: "shouldPlay")
             UserDefaults.standard.set(false, forKey: "isPlaying")
             UserDefaults.isFirstLaunchMenu()
             UserDefaults.standard.set(false, forKey: "isPaused")
         } else {
-            print("off")
             UserDefaults.standard.set(false, forKey: "shouldPlay")
             UserDefaults.standard.set(false, forKey: "isPlaying")
             UserDefaults.isFirstLaunchMenu()
@@ -72,14 +72,18 @@ class OptionsViewController: UIViewController {
     }
     
     @IBAction func moveToMenu(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
         self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        bannerView.adUnitID = ""
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
         // Configure the view.
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false

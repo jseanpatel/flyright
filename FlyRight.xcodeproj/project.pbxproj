@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9979B73F54857D01041B2DE /* Pods_FlyRight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451CA8971F8CB154C63B984F /* Pods_FlyRight.framework */; };
 		E2E805C41F400EFB00CFC795 /* Level_1.json in Resources */ = {isa = PBXBuildFile; fileRef = E2E805C31F400EFA00CFC795 /* Level_1.json */; };
 		F515A3301F087A4900541422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A32F1F087A4900541422 /* AppDelegate.swift */; };
 		F515A3361F087A4900541422 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A3351F087A4900541422 /* GameScene.swift */; };
@@ -23,17 +24,26 @@
 		F55973C620579FC9000FB69A /* CreditsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C520579FC9000FB69A /* CreditsScene.swift */; };
 		F55973CA2057A3A1000FB69A /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C92057A3A1000FB69A /* RecordsViewController.swift */; };
 		F55973CC2057A3AC000FB69A /* RecordsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973CB2057A3AC000FB69A /* RecordsScene.swift */; };
+		F563692420E8524D00B28EC3 /* FlyRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F563692320E8524D00B28EC3 /* FlyRight.mp3 */; };
+		F563692620E885B200B28EC3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F563692520E885B200B28EC3 /* Launch Screen.storyboard */; };
+		F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F563692B20E886D700B28EC3 /* Assets.xcassets */; };
+		F56810B620E4B6B3004EC41F /* Movement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F56810B520E4B6B3004EC41F /* Movement.mp3 */; };
+		F56810BA20E6029B004EC41F /* MoveBack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F56810B920E6029B004EC41F /* MoveBack.mp3 */; };
+		F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F56810BB20E60A14004EC41F /* GoogleService-Info.plist */; };
 		F57D31732000A12D00305849 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31722000A12D00305849 /* GameOverViewController.swift */; };
 		F57D31752002279800305849 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31742002279800305849 /* GameOverScene.swift */; };
-		F5C2042B20DF800500ECAC06 /* Blast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C2042A20DF800400ECAC06 /* Blast.mp3 */; };
 		F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C2042C20DF801100ECAC06 /* Chimera.mp3 */; };
+		F5C9416F20E463140044384A /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C9416C20E463130044384A /* Click.mp3 */; };
+		F5C9417120E463140044384A /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C9416E20E463140044384A /* End.mp3 */; };
 		F5F4A9B820D6289400213CF4 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9B720D6289400213CF4 /* Tile.swift */; };
-		F5F4A9BC20D7590200213CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F4A9BB20D7590100213CF4 /* Assets.xcassets */; };
 		F5F4A9C420DA3A4300213CF4 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */; };
 		F5F4A9C520DA3A4300213CF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451CA8971F8CB154C63B984F /* Pods_FlyRight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyRight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452F6E8D5BAA2758AEFCB9EB /* Pods-FlyRight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyRight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyRight/Pods-FlyRight.debug.xcconfig"; sourceTree = "<group>"; };
+		82B14421CF086DD26757EFF5 /* Pods-FlyRight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyRight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyRight/Pods-FlyRight.release.xcconfig"; sourceTree = "<group>"; };
 		E2E805C31F400EFA00CFC795 /* Level_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Level_1.json; sourceTree = "<group>"; };
 		F515A32C1F087A4900541422 /* FlyRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F515A32F1F087A4900541422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,12 +62,18 @@
 		F55973C520579FC9000FB69A /* CreditsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScene.swift; sourceTree = "<group>"; };
 		F55973C92057A3A1000FB69A /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		F55973CB2057A3AC000FB69A /* RecordsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsScene.swift; sourceTree = "<group>"; };
+		F563692320E8524D00B28EC3 /* FlyRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FlyRight.mp3; path = ../../../../Downloads/FlyRight.mp3; sourceTree = "<group>"; };
+		F563692520E885B200B28EC3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F563692B20E886D700B28EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F56810B520E4B6B3004EC41F /* Movement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Movement.mp3; path = ../../../../Downloads/Movement.mp3; sourceTree = "<group>"; };
+		F56810B920E6029B004EC41F /* MoveBack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MoveBack.mp3; path = ../../../../Downloads/MoveBack.mp3; sourceTree = "<group>"; };
+		F56810BB20E60A14004EC41F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F57D31722000A12D00305849 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		F57D31742002279800305849 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		F5C2042A20DF800400ECAC06 /* Blast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Blast.mp3; path = ../../../../Downloads/Blast.mp3; sourceTree = "<group>"; };
 		F5C2042C20DF801100ECAC06 /* Chimera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chimera.mp3; sourceTree = "<group>"; };
+		F5C9416C20E463130044384A /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Click.mp3; path = "../../../../Downloads/3_mp3_files (online-audio-converter/Click.mp3"; sourceTree = "<group>"; };
+		F5C9416E20E463140044384A /* End.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = End.mp3; path = "../../../../Downloads/3_mp3_files (online-audio-converter/End.mp3"; sourceTree = "<group>"; };
 		F5F4A9B720D6289400213CF4 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
-		F5F4A9BB20D7590100213CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "FlyRight/New Group/New Group/MenuScene.swift"; sourceTree = SOURCE_ROOT; };
 		F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "FlyRight/New Group/New Group/MenuViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -67,17 +83,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9979B73F54857D01041B2DE /* Pods_FlyRight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BFEBBEFB4860E8220A4E263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				451CA8971F8CB154C63B984F /* Pods_FlyRight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A570244D3E4D1DA1C62A07A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				452F6E8D5BAA2758AEFCB9EB /* Pods-FlyRight.debug.xcconfig */,
+				82B14421CF086DD26757EFF5 /* Pods-FlyRight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F515A3231F087A4900541422 = {
 			isa = PBXGroup;
 			children = (
 				F515A32E1F087A4900541422 /* FlyRight */,
 				F515A32D1F087A4900541422 /* Products */,
+				4A570244D3E4D1DA1C62A07A /* Pods */,
+				3BFEBBEFB4860E8220A4E263 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,7 +128,8 @@
 		F515A32E1F087A4900541422 /* FlyRight */ = {
 			isa = PBXGroup;
 			children = (
-				F5F4A9BB20D7590100213CF4 /* Assets.xcassets */,
+				F563692520E885B200B28EC3 /* Launch Screen.storyboard */,
+				F563692B20E886D700B28EC3 /* Assets.xcassets */,
 				F5C2043020DF818300ECAC06 /* Game Board */,
 				F5C2043420DF834700ECAC06 /* Game Progression */,
 				F55973C22056035F000FB69A /* Menu Related */,
@@ -155,8 +192,12 @@
 		F5C2042720DF7EE000ECAC06 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				F5C2042A20DF800400ECAC06 /* Blast.mp3 */,
+				F56810B920E6029B004EC41F /* MoveBack.mp3 */,
 				F5C2042C20DF801100ECAC06 /* Chimera.mp3 */,
+				F5C9416C20E463130044384A /* Click.mp3 */,
+				F5C9416E20E463140044384A /* End.mp3 */,
+				F56810B520E4B6B3004EC41F /* Movement.mp3 */,
+				F563692320E8524D00B28EC3 /* FlyRight.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -179,6 +220,7 @@
 				F515A32F1F087A4900541422 /* AppDelegate.swift */,
 				F515A3731F1490AB00541422 /* Extensions.swift */,
 				F515A3411F087A4900541422 /* Info.plist */,
+				F56810BB20E60A14004EC41F /* GoogleService-Info.plist */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -210,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F515A35A1F087A4900541422 /* Build configuration list for PBXNativeTarget "FlyRight" */;
 			buildPhases = (
+				0FE4B73BE499BB64AD535BC5 /* [CP] Check Pods Manifest.lock */,
 				F515A3281F087A4900541422 /* Sources */,
 				F515A3291F087A4900541422 /* Frameworks */,
 				F515A32A1F087A4900541422 /* Resources */,
+				E8130164E8E2987FEE71E764 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,15 +309,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E805C41F400EFB00CFC795 /* Level_1.json in Resources */,
+				F56810B620E4B6B3004EC41F /* Movement.mp3 in Resources */,
+				F563692420E8524D00B28EC3 /* FlyRight.mp3 in Resources */,
 				F515A33B1F087A4900541422 /* Main.storyboard in Resources */,
 				F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */,
+				F5C9417120E463140044384A /* End.mp3 in Resources */,
+				F563692620E885B200B28EC3 /* Launch Screen.storyboard in Resources */,
+				F5C9416F20E463140044384A /* Click.mp3 in Resources */,
 				F515A3401F087A4900541422 /* LaunchScreen.storyboard in Resources */,
-				F5C2042B20DF800500ECAC06 /* Blast.mp3 in Resources */,
-				F5F4A9BC20D7590200213CF4 /* Assets.xcassets in Resources */,
+				F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */,
+				F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */,
+				F56810BA20E6029B004EC41F /* MoveBack.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FE4B73BE499BB64AD535BC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlyRight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8130164E8E2987FEE71E764 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlyRight/Pods-FlyRight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyRight/Pods-FlyRight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F515A3281F087A4900541422 /* Sources */ = {
@@ -444,6 +535,7 @@
 		};
 		F515A35B1F087A4900541422 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452F6E8D5BAA2758AEFCB9EB /* Pods-FlyRight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -453,7 +545,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/FlyRight/Miscellaneous/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JacobPatel.RightTurn;
+				PRODUCT_BUNDLE_IDENTIFIER = JacobPatel.FlyRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -463,6 +555,7 @@
 		};
 		F515A35C1F087A4900541422 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82B14421CF086DD26757EFF5 /* Pods-FlyRight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -472,7 +565,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/FlyRight/Miscellaneous/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JacobPatel.RightTurn;
+				PRODUCT_BUNDLE_IDENTIFIER = JacobPatel.FlyRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;

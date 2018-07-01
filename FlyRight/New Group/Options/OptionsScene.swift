@@ -30,7 +30,7 @@ class OptionsScene: SKScene {
         
         // Put an image on the background. Because the scene's anchorPoint is
         // (0.5, 0.5), the background image will always be centered on the screen.
-        let background = SKSpriteNode(imageNamed: "Background")
+        let background = SKSpriteNode(imageNamed: "SpaceBackground")
         background.size = size
         addChild(background)
         

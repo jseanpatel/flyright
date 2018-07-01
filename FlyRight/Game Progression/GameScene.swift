@@ -56,7 +56,7 @@ class GameScene: SKScene {
     let TileHeight: CGFloat = 28
     // orig 30-30
     
-    var currTime: Date = Date()
+    var currTime: Date? = Date()
 
     let gameLayer = SKNode()
     let spacesLayer = SKNode()
@@ -73,7 +73,7 @@ class GameScene: SKScene {
 
     override func update(_ currentTime: TimeInterval) {
         if (currTime == nil) { currTime = Date() }
-        if (NSDate().timeIntervalSince(currTime) > 0.5) {
+        if (NSDate().timeIntervalSince(currTime!) > 0.5) {
             shuffle()
             currTime = Date()
         }
@@ -100,7 +100,7 @@ class GameScene: SKScene {
 
         // Put an image on the background. Because the scene's anchorPoint is
         // (0.5, 0.5), the background image will always be centered on the screen.
-        let background = SKSpriteNode(imageNamed: "Background")
+        let background = SKSpriteNode(imageNamed: "SpaceBackground")
         background.size = size
         addChild(background)
 
@@ -147,7 +147,6 @@ class GameScene: SKScene {
             sprite.size = CGSize(width: TileWidth, height: TileHeight)
             sprite.position = pointFor(column: space.column, row: space.row)
             if (space.getSpaceType() == SpaceType.Spaceship) {
-                var shipTexture: SKTexture = sprite.texture!
                 var shipImage = UIImage(cgImage: (sprite.texture?.cgImage())!)
                 shipImage = shipImage.rotateImageByDegrees(CGFloat((level.getShipRef()?.getDegree())!))
                 let shipRefTexture: SKTexture = SKTexture(image: shipImage)

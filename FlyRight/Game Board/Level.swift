@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 let NumColumns = 12
 let NumRows = 12
@@ -17,6 +18,8 @@ var timesRun = 0
 
 class Level {
 
+    var shipAudioPlayer: AVAudioPlayer!
+    
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     weak var scene: GameScene!
 
