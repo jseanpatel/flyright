@@ -13,15 +13,13 @@ import Firebase
 // Variable to control playing of music.
 var audioPlayer: AVAudioPlayer!
 
+// Variable to control playing of sounds.
  var soundPlayer: AVAudioPlayer!
 
 class MenuViewController: UIViewController {
 
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     var scene: MenuScene!
-
-    // References back to the old viewControllers so that they can be dismissed.
-    var optionsVC: OptionsViewController!
     
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
@@ -40,26 +38,21 @@ class MenuViewController: UIViewController {
     
     @IBAction func moveToGame(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toGameSegue", sender: nil)
         AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
     @IBAction func moveToCredits(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toCreditsSegue", sender: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
     @IBAction func moveToOptions(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
-
     @IBAction func moveToRecords(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toRecordsSegue", sender: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
@@ -70,14 +63,6 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /**
-        if optionsVC != nil {
-            print("here")
-        // Dismiss the previous VC's.
-        self.dismiss(animated: false, completion: nil)
-        }
- */
 
         bannerView.adUnitID = ""
         bannerView.rootViewController = self

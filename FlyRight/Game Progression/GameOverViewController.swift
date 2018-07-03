@@ -26,7 +26,7 @@ class GameOverViewController: UIViewController {
     }
     
     @IBAction func moveToOptions(_ sender: Any) {
-        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
+        self.dismiss(animated: true, completion: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
@@ -45,7 +45,7 @@ class GameOverViewController: UIViewController {
     }
 
     @IBAction func moveToMenu(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+        self.dismiss(animated: true, completion: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
 

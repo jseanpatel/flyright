@@ -72,14 +72,13 @@ class GameViewController: UIViewController {
     @IBAction func turn(_ sender: UIButton) {
         level.getShipRef()?.changeDirection()
         turns += 1
-        AVAudioPlayer.playSpecAudio(audioPiece: "FlyRight", volume: 0.55)
-        
+        AVAudioPlayer.playSpecAudio(audioPiece: "FlyRight", volume: 0.5)
     }
 
     //End the game and transition over the GameOverViewController.
     func gameOver() {
 
-        AVAudioPlayer.playSpecAudio(audioPiece: "End", volume: 0.7)
+        AVAudioPlayer.playSpecAudio(audioPiece: "End", volume: 0.6)
 
         let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
         gameOverVC.gVC = self

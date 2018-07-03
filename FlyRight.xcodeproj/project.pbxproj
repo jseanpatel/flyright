@@ -25,7 +25,6 @@
 		F55973CA2057A3A1000FB69A /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C92057A3A1000FB69A /* RecordsViewController.swift */; };
 		F55973CC2057A3AC000FB69A /* RecordsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973CB2057A3AC000FB69A /* RecordsScene.swift */; };
 		F563692420E8524D00B28EC3 /* FlyRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F563692320E8524D00B28EC3 /* FlyRight.mp3 */; };
-		F563692620E885B200B28EC3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F563692520E885B200B28EC3 /* Launch Screen.storyboard */; };
 		F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F563692B20E886D700B28EC3 /* Assets.xcassets */; };
 		F56810B620E4B6B3004EC41F /* Movement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F56810B520E4B6B3004EC41F /* Movement.mp3 */; };
 		F56810BA20E6029B004EC41F /* MoveBack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F56810B920E6029B004EC41F /* MoveBack.mp3 */; };
@@ -63,7 +62,6 @@
 		F55973C92057A3A1000FB69A /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		F55973CB2057A3AC000FB69A /* RecordsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsScene.swift; sourceTree = "<group>"; };
 		F563692320E8524D00B28EC3 /* FlyRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FlyRight.mp3; path = ../../../../Downloads/FlyRight.mp3; sourceTree = "<group>"; };
-		F563692520E885B200B28EC3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F563692B20E886D700B28EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F56810B520E4B6B3004EC41F /* Movement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Movement.mp3; path = ../../../../Downloads/Movement.mp3; sourceTree = "<group>"; };
 		F56810B920E6029B004EC41F /* MoveBack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MoveBack.mp3; path = ../../../../Downloads/MoveBack.mp3; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 		F515A32E1F087A4900541422 /* FlyRight */ = {
 			isa = PBXGroup;
 			children = (
-				F563692520E885B200B28EC3 /* Launch Screen.storyboard */,
 				F563692B20E886D700B28EC3 /* Assets.xcassets */,
 				F5C2043020DF818300ECAC06 /* Game Board */,
 				F5C2043420DF834700ECAC06 /* Game Progression */,
@@ -314,7 +311,6 @@
 				F515A33B1F087A4900541422 /* Main.storyboard in Resources */,
 				F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */,
 				F5C9417120E463140044384A /* End.mp3 in Resources */,
-				F563692620E885B200B28EC3 /* Launch Screen.storyboard in Resources */,
 				F5C9416F20E463140044384A /* Click.mp3 in Resources */,
 				F515A3401F087A4900541422 /* LaunchScreen.storyboard in Resources */,
 				F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */,
@@ -538,6 +534,7 @@
 			baseConfigurationReference = 452F6E8D5BAA2758AEFCB9EB /* Pods-FlyRight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -549,7 +546,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -558,6 +555,7 @@
 			baseConfigurationReference = 82B14421CF086DD26757EFF5 /* Pods-FlyRight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -569,7 +567,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

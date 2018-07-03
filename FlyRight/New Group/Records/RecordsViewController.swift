@@ -29,6 +29,14 @@ class RecordsViewController: UIViewController {
     
     // Shortened reference to userDefaults.
     let defaults = UserDefaults.standard
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let OptionsViewController = segue.destination as? OptionsViewController {
+        
+          //  OptionsViewController.recordsVC = self
+            
+        }
+    }
 
     //This method will update any labels with appropriate values.
     func updateLabels() {
@@ -36,7 +44,7 @@ class RecordsViewController: UIViewController {
         scoreHigh.text = String(format: "%ld", defaults.integer(forKey: "score"))
         turnsHigh.text = String(format: "%ld", defaults.integer(forKey: "turns"))
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -51,14 +59,12 @@ class RecordsViewController: UIViewController {
 
     @IBAction func moveToMenu(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
 
     
     @IBAction func moveToOptions(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
@@ -68,7 +74,7 @@ class RecordsViewController: UIViewController {
         // Make sure high scores are current by updating labels.
         updateLabels()
         
-        bannerView.adUnitID = ""
+        bannerView.adUnitID = "ca-app-pub-7204561255681761/8909278541"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
 

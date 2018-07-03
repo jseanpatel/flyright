@@ -19,7 +19,7 @@ class OptionsViewController: UIViewController {
     var tapGestureRecognizer: UITapGestureRecognizer!
 
     // MARK: View Controller Functions
-
+    
     @IBOutlet weak var bannerView: GADBannerView!
     
     // To reference music.
@@ -74,7 +74,6 @@ class OptionsViewController: UIViewController {
     @IBAction func moveToMenu(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
-        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
     }
 
     override func viewDidLoad() {

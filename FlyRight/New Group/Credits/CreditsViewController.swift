@@ -22,6 +22,7 @@ class CreditsViewController: UIViewController {
     
     @IBOutlet weak var bannerView: GADBannerView!
     
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -31,12 +32,12 @@ class CreditsViewController: UIViewController {
     }
     
     @IBAction func moveToMenu(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMenuSegue", sender: nil)
+        self.dismiss(animated: true, completion: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
     @IBAction func moveToOptions(_ sender: Any) {
-        self.performSegue(withIdentifier: "toOptionsSegue", sender: nil)
+        self.dismiss(animated: true, completion: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
     }
     
