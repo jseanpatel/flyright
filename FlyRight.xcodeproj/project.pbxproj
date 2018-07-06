@@ -18,22 +18,18 @@
 		F515A36C1F0A287A00541422 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A36B1F0A287A00541422 /* Array2D.swift */; };
 		F515A36E1F0B404500541422 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A36D1F0B404500541422 /* Level.swift */; };
 		F515A3741F1490AB00541422 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515A3731F1490AB00541422 /* Extensions.swift */; };
+		F546331920F02D1C0099B2AD /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F546331820F02D1C0099B2AD /* GoogleMobileAds.framework */; };
 		F55973BF205602C8000FB69A /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973BE205602C7000FB69A /* OptionsScene.swift */; };
 		F55973C1205602CA000FB69A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C0205602CA000FB69A /* OptionsViewController.swift */; };
 		F55973C420579FBA000FB69A /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C320579FBA000FB69A /* CreditsViewController.swift */; };
 		F55973C620579FC9000FB69A /* CreditsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C520579FC9000FB69A /* CreditsScene.swift */; };
 		F55973CA2057A3A1000FB69A /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C92057A3A1000FB69A /* RecordsViewController.swift */; };
 		F55973CC2057A3AC000FB69A /* RecordsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973CB2057A3AC000FB69A /* RecordsScene.swift */; };
-		F563692420E8524D00B28EC3 /* FlyRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F563692320E8524D00B28EC3 /* FlyRight.mp3 */; };
 		F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F563692B20E886D700B28EC3 /* Assets.xcassets */; };
-		F56810B620E4B6B3004EC41F /* Movement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F56810B520E4B6B3004EC41F /* Movement.mp3 */; };
-		F56810BA20E6029B004EC41F /* MoveBack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F56810B920E6029B004EC41F /* MoveBack.mp3 */; };
 		F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F56810BB20E60A14004EC41F /* GoogleService-Info.plist */; };
 		F57D31732000A12D00305849 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31722000A12D00305849 /* GameOverViewController.swift */; };
 		F57D31752002279800305849 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31742002279800305849 /* GameOverScene.swift */; };
 		F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C2042C20DF801100ECAC06 /* Chimera.mp3 */; };
-		F5C9416F20E463140044384A /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C9416C20E463130044384A /* Click.mp3 */; };
-		F5C9417120E463140044384A /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C9416E20E463140044384A /* End.mp3 */; };
 		F5F4A9B820D6289400213CF4 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9B720D6289400213CF4 /* Tile.swift */; };
 		F5F4A9C420DA3A4300213CF4 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */; };
 		F5F4A9C520DA3A4300213CF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */; };
@@ -55,22 +51,18 @@
 		F515A36B1F0A287A00541422 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		F515A36D1F0B404500541422 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		F515A3731F1490AB00541422 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F546331820F02D1C0099B2AD /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F55973BE205602C7000FB69A /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		F55973C0205602CA000FB69A /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		F55973C320579FBA000FB69A /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		F55973C520579FC9000FB69A /* CreditsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScene.swift; sourceTree = "<group>"; };
 		F55973C92057A3A1000FB69A /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		F55973CB2057A3AC000FB69A /* RecordsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsScene.swift; sourceTree = "<group>"; };
-		F563692320E8524D00B28EC3 /* FlyRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FlyRight.mp3; path = ../../../../Downloads/FlyRight.mp3; sourceTree = "<group>"; };
 		F563692B20E886D700B28EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F56810B520E4B6B3004EC41F /* Movement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Movement.mp3; path = ../../../../Downloads/Movement.mp3; sourceTree = "<group>"; };
-		F56810B920E6029B004EC41F /* MoveBack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MoveBack.mp3; path = ../../../../Downloads/MoveBack.mp3; sourceTree = "<group>"; };
 		F56810BB20E60A14004EC41F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F57D31722000A12D00305849 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		F57D31742002279800305849 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F5C2042C20DF801100ECAC06 /* Chimera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chimera.mp3; sourceTree = "<group>"; };
-		F5C9416C20E463130044384A /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Click.mp3; path = "../../../../Downloads/3_mp3_files (online-audio-converter/Click.mp3"; sourceTree = "<group>"; };
-		F5C9416E20E463140044384A /* End.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = End.mp3; path = "../../../../Downloads/3_mp3_files (online-audio-converter/End.mp3"; sourceTree = "<group>"; };
 		F5F4A9B720D6289400213CF4 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "FlyRight/New Group/New Group/MenuScene.swift"; sourceTree = SOURCE_ROOT; };
 		F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "FlyRight/New Group/New Group/MenuViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -81,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F546331920F02D1C0099B2AD /* GoogleMobileAds.framework in Frameworks */,
 				A9979B73F54857D01041B2DE /* Pods_FlyRight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +101,7 @@
 		F515A3231F087A4900541422 = {
 			isa = PBXGroup;
 			children = (
+				F546331820F02D1C0099B2AD /* GoogleMobileAds.framework */,
 				F515A32E1F087A4900541422 /* FlyRight */,
 				F515A32D1F087A4900541422 /* Products */,
 				4A570244D3E4D1DA1C62A07A /* Pods */,
@@ -189,12 +183,7 @@
 		F5C2042720DF7EE000ECAC06 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				F56810B920E6029B004EC41F /* MoveBack.mp3 */,
 				F5C2042C20DF801100ECAC06 /* Chimera.mp3 */,
-				F5C9416C20E463130044384A /* Click.mp3 */,
-				F5C9416E20E463140044384A /* End.mp3 */,
-				F56810B520E4B6B3004EC41F /* Movement.mp3 */,
-				F563692320E8524D00B28EC3 /* FlyRight.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -306,16 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E805C41F400EFB00CFC795 /* Level_1.json in Resources */,
-				F56810B620E4B6B3004EC41F /* Movement.mp3 in Resources */,
-				F563692420E8524D00B28EC3 /* FlyRight.mp3 in Resources */,
 				F515A33B1F087A4900541422 /* Main.storyboard in Resources */,
 				F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */,
-				F5C9417120E463140044384A /* End.mp3 in Resources */,
-				F5C9416F20E463140044384A /* Click.mp3 in Resources */,
 				F515A3401F087A4900541422 /* LaunchScreen.storyboard in Resources */,
 				F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */,
 				F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */,
-				F56810BA20E6029B004EC41F /* MoveBack.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +523,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JM95H3WH6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/FlyRight/Miscellaneous/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -560,6 +548,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JM95H3WH6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/FlyRight/Miscellaneous/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -9,6 +9,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 import Firebase
+import GoogleMobileAds
 
 // Variable to control playing of music.
 var audioPlayer: AVAudioPlayer!

@@ -9,6 +9,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 import Firebase
+import GoogleMobileAds
 
 class OptionsViewController: UIViewController {
 
