@@ -64,8 +64,8 @@
 		F57D31742002279800305849 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F5C2042C20DF801100ECAC06 /* Chimera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chimera.mp3; sourceTree = "<group>"; };
 		F5F4A9B720D6289400213CF4 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
-		F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "FlyRight/New Group/New Group/MenuScene.swift"; sourceTree = SOURCE_ROOT; };
-		F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "FlyRight/New Group/New Group/MenuViewController.swift"; sourceTree = SOURCE_ROOT; };
+		F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = FlyRight/Views/MenuScene.swift; sourceTree = SOURCE_ROOT; };
+		F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = FlyRight/Controllers/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,64 +120,14 @@
 		F515A32E1F087A4900541422 /* FlyRight */ = {
 			isa = PBXGroup;
 			children = (
+				F5F78E5320F42B0C00EB4E86 /* Models */,
+				F5F78E5520F42B2200EB4E86 /* Views */,
+				F5F78E5420F42B1B00EB4E86 /* Controllers */,
 				F563692B20E886D700B28EC3 /* Assets.xcassets */,
-				F5C2043020DF818300ECAC06 /* Game Board */,
-				F5C2043420DF834700ECAC06 /* Game Progression */,
-				F55973C22056035F000FB69A /* Menu Related */,
 				F5C2043220DF82AF00ECAC06 /* Miscellaneous */,
-				F5C2043320DF82FF00ECAC06 /* Storyboards */,
 				F5C2042720DF7EE000ECAC06 /* Sounds */,
 			);
 			path = FlyRight;
-			sourceTree = "<group>";
-		};
-		F55973C22056035F000FB69A /* Menu Related */ = {
-			isa = PBXGroup;
-			children = (
-				F5C2042220DF0DEC00ECAC06 /* Menu */,
-				F55973C72057A370000FB69A /* Options */,
-				F55973C82057A386000FB69A /* Credits */,
-				F55973CD2057A3B0000FB69A /* Records */,
-			);
-			name = "Menu Related";
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		F55973C72057A370000FB69A /* Options */ = {
-			isa = PBXGroup;
-			children = (
-				F55973C0205602CA000FB69A /* OptionsViewController.swift */,
-				F55973BE205602C7000FB69A /* OptionsScene.swift */,
-			);
-			path = Options;
-			sourceTree = "<group>";
-		};
-		F55973C82057A386000FB69A /* Credits */ = {
-			isa = PBXGroup;
-			children = (
-				F55973C320579FBA000FB69A /* CreditsViewController.swift */,
-				F55973C520579FC9000FB69A /* CreditsScene.swift */,
-			);
-			path = Credits;
-			sourceTree = "<group>";
-		};
-		F55973CD2057A3B0000FB69A /* Records */ = {
-			isa = PBXGroup;
-			children = (
-				F55973C92057A3A1000FB69A /* RecordsViewController.swift */,
-				F55973CB2057A3AC000FB69A /* RecordsScene.swift */,
-			);
-			path = Records;
-			sourceTree = "<group>";
-		};
-		F5C2042220DF0DEC00ECAC06 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */,
-				F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */,
-			);
-			name = Menu;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		F5C2042720DF7EE000ECAC06 /* Sounds */ = {
@@ -186,18 +136,6 @@
 				F5C2042C20DF801100ECAC06 /* Chimera.mp3 */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		F5C2043020DF818300ECAC06 /* Game Board */ = {
-			isa = PBXGroup;
-			children = (
-				F515A36B1F0A287A00541422 /* Array2D.swift */,
-				F515A36D1F0B404500541422 /* Level.swift */,
-				F515A3691F0883AA00541422 /* Space.swift */,
-				F5F4A9B720D6289400213CF4 /* Tile.swift */,
-				E2E805C31F400EFA00CFC795 /* Level_1.json */,
-			);
-			path = "Game Board";
 			sourceTree = "<group>";
 		};
 		F5C2043220DF82AF00ECAC06 /* Miscellaneous */ = {
@@ -211,24 +149,44 @@
 			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
-		F5C2043320DF82FF00ECAC06 /* Storyboards */ = {
+		F5F78E5320F42B0C00EB4E86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F515A36B1F0A287A00541422 /* Array2D.swift */,
+				F515A36D1F0B404500541422 /* Level.swift */,
+				F515A3691F0883AA00541422 /* Space.swift */,
+				F5F4A9B720D6289400213CF4 /* Tile.swift */,
+				E2E805C31F400EFA00CFC795 /* Level_1.json */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5F78E5420F42B1B00EB4E86 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */,
+				F55973C0205602CA000FB69A /* OptionsViewController.swift */,
+				F55973C92057A3A1000FB69A /* RecordsViewController.swift */,
+				F55973C320579FBA000FB69A /* CreditsViewController.swift */,
+				F515A3371F087A4900541422 /* GameViewController.swift */,
+				F57D31722000A12D00305849 /* GameOverViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5F78E5520F42B2200EB4E86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */,
+				F515A3351F087A4900541422 /* GameScene.swift */,
+				F55973BE205602C7000FB69A /* OptionsScene.swift */,
+				F55973C520579FC9000FB69A /* CreditsScene.swift */,
+				F55973CB2057A3AC000FB69A /* RecordsScene.swift */,
+				F57D31742002279800305849 /* GameOverScene.swift */,
 				F515A33E1F087A4900541422 /* LaunchScreen.storyboard */,
 				F515A3391F087A4900541422 /* Main.storyboard */,
 			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		F5C2043420DF834700ECAC06 /* Game Progression */ = {
-			isa = PBXGroup;
-			children = (
-				F515A3371F087A4900541422 /* GameViewController.swift */,
-				F515A3351F087A4900541422 /* GameScene.swift */,
-				F57D31722000A12D00305849 /* GameOverViewController.swift */,
-				F57D31742002279800305849 /* GameOverScene.swift */,
-			);
-			path = "Game Progression";
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
