@@ -33,6 +33,10 @@
 		F5F4A9B820D6289400213CF4 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9B720D6289400213CF4 /* Tile.swift */; };
 		F5F4A9C420DA3A4300213CF4 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */; };
 		F5F4A9C520DA3A4300213CF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */; };
+		F5FFCF5820F438B800BC1BEE /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5FFCF5420F438B700BC1BEE /* Click.mp3 */; };
+		F5FFCF5920F438B800BC1BEE /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5FFCF5520F438B700BC1BEE /* End.mp3 */; };
+		F5FFCF5A20F438B800BC1BEE /* Back.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5FFCF5620F438B800BC1BEE /* Back.mp3 */; };
+		F5FFCF5B20F438B800BC1BEE /* FlyRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5FFCF5720F438B800BC1BEE /* FlyRight.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		F5F4A9B720D6289400213CF4 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = FlyRight/Views/MenuScene.swift; sourceTree = SOURCE_ROOT; };
 		F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = FlyRight/Controllers/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		F5FFCF5420F438B700BC1BEE /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Click.mp3; sourceTree = "<group>"; };
+		F5FFCF5520F438B700BC1BEE /* End.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = End.mp3; sourceTree = "<group>"; };
+		F5FFCF5620F438B800BC1BEE /* Back.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Back.mp3; sourceTree = "<group>"; };
+		F5FFCF5720F438B800BC1BEE /* FlyRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FlyRight.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +128,10 @@
 		F515A32E1F087A4900541422 /* FlyRight */ = {
 			isa = PBXGroup;
 			children = (
+				F563692B20E886D700B28EC3 /* Assets.xcassets */,
 				F5F78E5320F42B0C00EB4E86 /* Models */,
 				F5F78E5520F42B2200EB4E86 /* Views */,
 				F5F78E5420F42B1B00EB4E86 /* Controllers */,
-				F563692B20E886D700B28EC3 /* Assets.xcassets */,
 				F5C2043220DF82AF00ECAC06 /* Miscellaneous */,
 				F5C2042720DF7EE000ECAC06 /* Sounds */,
 			);
@@ -134,6 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				F5C2042C20DF801100ECAC06 /* Chimera.mp3 */,
+				F5FFCF5620F438B800BC1BEE /* Back.mp3 */,
+				F5FFCF5420F438B700BC1BEE /* Click.mp3 */,
+				F5FFCF5520F438B700BC1BEE /* End.mp3 */,
+				F5FFCF5720F438B800BC1BEE /* FlyRight.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -252,10 +264,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5FFCF5A20F438B800BC1BEE /* Back.mp3 in Resources */,
 				E2E805C41F400EFB00CFC795 /* Level_1.json in Resources */,
 				F515A33B1F087A4900541422 /* Main.storyboard in Resources */,
 				F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */,
+				F5FFCF5820F438B800BC1BEE /* Click.mp3 in Resources */,
+				F5FFCF5920F438B800BC1BEE /* End.mp3 in Resources */,
 				F515A3401F087A4900541422 /* LaunchScreen.storyboard in Resources */,
+				F5FFCF5B20F438B800BC1BEE /* FlyRight.mp3 in Resources */,
 				F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */,
 				F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */,
 			);

@@ -28,7 +28,7 @@ class GameOverViewController: UIViewController {
     
     @IBAction func moveToOptions(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
     
     @IBAction func restartGame(_ sender: Any) {
@@ -38,7 +38,7 @@ class GameOverViewController: UIViewController {
         }
         self.removeFromParentViewController()
         gVC.refreshGame()
-         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
     
     override var shouldAutorotate: Bool {
@@ -47,7 +47,7 @@ class GameOverViewController: UIViewController {
 
     @IBAction func moveToMenu(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

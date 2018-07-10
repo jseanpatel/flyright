@@ -185,7 +185,6 @@ extension AVAudioPlayer {
     static func playSpecAudio(audioPiece: String, volume: Float) {
         if (UserDefaults.standard.bool(forKey: "shouldMakeSounds" )) {
             
-            /**
             // Set path to music.
             let url = Bundle.main.url(forResource: audioPiece, withExtension: "mp3")
             
@@ -199,7 +198,6 @@ extension AVAudioPlayer {
  
             soundPlayer.volume = volume
             soundPlayer.play()
- */
         }
     }
 }

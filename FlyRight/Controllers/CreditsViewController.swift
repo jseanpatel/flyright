@@ -34,12 +34,12 @@ class CreditsViewController: UIViewController {
     
     @IBAction func moveToMenu(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
     
     @IBAction func moveToOptions(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "MoveBack", volume: 0.7)
+         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
