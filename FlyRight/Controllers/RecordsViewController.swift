@@ -30,14 +30,6 @@ class RecordsViewController: UIViewController {
     
     // Shortened reference to userDefaults.
     let defaults = UserDefaults.standard
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let OptionsViewController = segue.destination as? OptionsViewController {
-        
-          //  OptionsViewController.recordsVC = self
-            
-        }
-    }
 
     //This method will update any labels with appropriate values.
     func updateLabels() {

@@ -192,7 +192,7 @@ extension AVAudioPlayer {
             do {
                 soundPlayer = try AVAudioPlayer(contentsOf: url!)
                 soundPlayer.prepareToPlay()
-            } catch let error as NSError {
+            } catch _ as NSError {
                 print("error in instantiating soundAudioPlayer")
             }
  
