@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  RecordsViewController.swift
 //  FlyRight
 //
 //  Created by Jacob Patel on 3/13/18.
@@ -51,13 +51,12 @@ class RecordsViewController: UIViewController {
     }
 
     @IBAction func moveToMenu(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
          AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
 
     
     @IBAction func moveToOptions(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
     
@@ -67,7 +66,7 @@ class RecordsViewController: UIViewController {
         // Make sure high scores are current by updating labels.
         updateLabels()
         
-        bannerView.adUnitID = "ca-app-pub-7204561255681761/8909278541"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
 

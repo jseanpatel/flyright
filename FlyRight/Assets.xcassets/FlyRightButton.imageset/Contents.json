@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "gridtile.png",
+      "filename" : "FlyRightButton.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "FlyRightButton@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "FlyRightButton@3x.png",
       "scale" : "3x"
     }
   ],

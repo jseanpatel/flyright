@@ -44,18 +44,14 @@ extension UIImage {
 class GameScene: SKScene {
 
     var gameViewController: GameViewController?
-    
+
     // MARK: Properties
 
-    // This is marked as ! because it will not initially have a value, but pretty
-    // soon after the GameScene is created it will be given a Level object, and
-    // from then on it will always have one (it will never be nil again).
     var level: Level!
 
     let TileWidth: CGFloat = 28
     let TileHeight: CGFloat = 28
-    // orig 30-30
-    
+
     var currTime: Date? = Date()
 
     let gameLayer = SKNode()
@@ -78,7 +74,7 @@ class GameScene: SKScene {
             currTime = Date()
         }
     }
-    
+
     func shuffle() {
         removeAllSpaces()
 
@@ -126,12 +122,11 @@ class GameScene: SKScene {
 
     // MARK: Level Setup
 
-    // IMPORTANT NOTE JACOB! You deleted this line: if level.tileAt(column: column, row: row) != nil {
+    // If there is a tile at this position, then create a new tile
+    // sprite and add it to the mask layer
     func addTiles() {
         for row in 0..<NumRows {
             for column in 0..<NumColumns {
-                // If there is a tile at this position, then create a new tile
-                // sprite and add it to the mask layer
                 let tileNode = SKSpriteNode(imageNamed: "Tile")
                 tileNode.size = CGSize(width: TileWidth, height: TileHeight)
                 tileNode.position = pointFor(column: column, row: row)
@@ -139,10 +134,9 @@ class GameScene: SKScene {
             }
         }
     }
-
+// Create a new sprite for the space and add it to the spacesLayer.
     func addSprites(for spaces: Set<Space>) {
         for space in spaces {
-            // Create a new sprite for the space and add it to the spacesLayer.
             let sprite = SKSpriteNode(imageNamed: space.spaceType.spriteName)
             sprite.size = CGSize(width: TileWidth, height: TileHeight)
             sprite.position = pointFor(column: space.column, row: space.row)
@@ -157,7 +151,7 @@ class GameScene: SKScene {
 
         }
     }
-    
+
     // Add animations every time the game is restarted.
     func animateBeginGame(_ completion: @escaping () -> ()) {
         gameLayer.isHidden = false

@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  OptionsViewController.swift
 //  FlyRight
 //
 //  Created by Jacob Patel on 3/3/18.
@@ -73,14 +73,14 @@ class OptionsViewController: UIViewController {
     }
     
     @IBAction func moveToMenu(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         AVAudioPlayer.playSpecAudio(audioPiece: "Back", volume: 0.7)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.adUnitID = ""
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         

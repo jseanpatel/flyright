@@ -14,7 +14,6 @@ enum SpaceType: Int, CustomStringConvertible {
     case unknown = 0, Asteroid, Spaceship
 
     //  These sprite names have not been chosen yet because the mutli-tile features have not been implemented yet.
-
     var spriteName: String {
         let spriteNames = [
             "Asteroid",
@@ -24,18 +23,12 @@ enum SpaceType: Int, CustomStringConvertible {
         return spriteNames[rawValue - 1]
     }
 
-
-    var highlightedSpriteName: String {
-        return spriteName + "-Highlighted"
-    }
-
     var description: String {
         return spriteName
     }
 
-    // Original arc4random_uniform(2) + 1.
+
     static func random() -> SpaceType {
-        //return SpaceType(rawValue: 1)!
         return SpaceType(rawValue: Int(arc4random_uniform(1)) + 1)!
     }
 
@@ -44,7 +37,7 @@ enum SpaceType: Int, CustomStringConvertible {
     static func ship() -> SpaceType {
         return SpaceType(rawValue: 2)!
     }
-    
+
 }
 
 
@@ -67,7 +60,7 @@ class Space: CustomStringConvertible, Hashable {
         self.row = row
         self.spaceType = spaceType
     }
-    
+
     init(spaceType: SpaceType) {
         self.spaceType = spaceType
         row = -1
@@ -82,7 +75,6 @@ class Space: CustomStringConvertible, Hashable {
         return row * 10 + column
     }
 
-    // Jacob, don't forget to add something in the future for the boundaries of the board.
     func move() {
         switch(direction) {
         case "north":
@@ -100,7 +92,7 @@ class Space: CustomStringConvertible, Hashable {
     func getSpaceType() -> SpaceType {
         return spaceType
     }
-    
+
     func changeDirection() {
         switch(direction) {
         case "north":
@@ -132,16 +124,16 @@ class Space: CustomStringConvertible, Hashable {
     func getDirection() -> String {
         return direction
     }
-    
+
     func getRow() -> Int {
         return row
     }
-    
+
     func getColumn() -> Int {
         return column
     }
-    
-    func getType() -> SpaceType{
+
+    func getType() -> SpaceType {
         return spaceType
     }
 }

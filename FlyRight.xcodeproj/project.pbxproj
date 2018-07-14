@@ -25,11 +25,11 @@
 		F55973C620579FC9000FB69A /* CreditsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C520579FC9000FB69A /* CreditsScene.swift */; };
 		F55973CA2057A3A1000FB69A /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973C92057A3A1000FB69A /* RecordsViewController.swift */; };
 		F55973CC2057A3AC000FB69A /* RecordsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55973CB2057A3AC000FB69A /* RecordsScene.swift */; };
-		F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F563692B20E886D700B28EC3 /* Assets.xcassets */; };
 		F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F56810BB20E60A14004EC41F /* GoogleService-Info.plist */; };
 		F57D31732000A12D00305849 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31722000A12D00305849 /* GameOverViewController.swift */; };
 		F57D31752002279800305849 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D31742002279800305849 /* GameOverScene.swift */; };
 		F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C2042C20DF801100ECAC06 /* Chimera.mp3 */; };
+		F5E7569120F9A2CB0060C3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E7569020F9A2CA0060C3C4 /* Assets.xcassets */; };
 		F5F4A9B820D6289400213CF4 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9B720D6289400213CF4 /* Tile.swift */; };
 		F5F4A9C420DA3A4300213CF4 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */; };
 		F5F4A9C520DA3A4300213CF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */; };
@@ -62,11 +62,11 @@
 		F55973C520579FC9000FB69A /* CreditsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsScene.swift; sourceTree = "<group>"; };
 		F55973C92057A3A1000FB69A /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		F55973CB2057A3AC000FB69A /* RecordsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsScene.swift; sourceTree = "<group>"; };
-		F563692B20E886D700B28EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F56810BB20E60A14004EC41F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F57D31722000A12D00305849 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		F57D31742002279800305849 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F5C2042C20DF801100ECAC06 /* Chimera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chimera.mp3; sourceTree = "<group>"; };
+		F5E7569020F9A2CA0060C3C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FlyRight/Assets.xcassets; sourceTree = "<group>"; };
 		F5F4A9B720D6289400213CF4 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		F5F4A9C220DA3A4300213CF4 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = FlyRight/Views/MenuScene.swift; sourceTree = SOURCE_ROOT; };
 		F5F4A9C320DA3A4300213CF4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = FlyRight/Controllers/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -109,6 +109,7 @@
 		F515A3231F087A4900541422 = {
 			isa = PBXGroup;
 			children = (
+				F5E7569020F9A2CA0060C3C4 /* Assets.xcassets */,
 				F546331820F02D1C0099B2AD /* GoogleMobileAds.framework */,
 				F515A32E1F087A4900541422 /* FlyRight */,
 				F515A32D1F087A4900541422 /* Products */,
@@ -128,7 +129,6 @@
 		F515A32E1F087A4900541422 /* FlyRight */ = {
 			isa = PBXGroup;
 			children = (
-				F563692B20E886D700B28EC3 /* Assets.xcassets */,
 				F5F78E5320F42B0C00EB4E86 /* Models */,
 				F5F78E5520F42B2200EB4E86 /* Views */,
 				F5F78E5420F42B1B00EB4E86 /* Controllers */,
@@ -268,12 +268,12 @@
 				E2E805C41F400EFB00CFC795 /* Level_1.json in Resources */,
 				F515A33B1F087A4900541422 /* Main.storyboard in Resources */,
 				F5C2042D20DF801100ECAC06 /* Chimera.mp3 in Resources */,
+				F5E7569120F9A2CB0060C3C4 /* Assets.xcassets in Resources */,
 				F5FFCF5820F438B800BC1BEE /* Click.mp3 in Resources */,
 				F5FFCF5920F438B800BC1BEE /* End.mp3 in Resources */,
 				F515A3401F087A4900541422 /* LaunchScreen.storyboard in Resources */,
 				F5FFCF5B20F438B800BC1BEE /* FlyRight.mp3 in Resources */,
 				F56810BC20E60A15004EC41F /* GoogleService-Info.plist in Resources */,
-				F563692C20E886D800B28EC3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JacobPatel.FlyRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -532,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JacobPatel.FlyRight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

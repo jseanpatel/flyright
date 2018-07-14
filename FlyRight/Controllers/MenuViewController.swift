@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  MenuViewController.swift
 //  FlyRight
 //
 //  Created by Jacob Patel on 1/4/18.
@@ -15,16 +15,16 @@ import GoogleMobileAds
 var audioPlayer: AVAudioPlayer!
 
 // Variable to control playing of sounds.
- var soundPlayer: AVAudioPlayer!
+var soundPlayer: AVAudioPlayer!
 
 class MenuViewController: UIViewController {
 
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     var scene: MenuScene!
-    
+
     // For recognizing gestures.
     var tapGestureRecognizer: UITapGestureRecognizer!
-    
+
     // MARK: View Controller Functions
 
     override var prefersStatusBarHidden: Bool {
@@ -34,41 +34,39 @@ class MenuViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
-    
+
     @IBOutlet weak var bannerView: GADBannerView!
-    
+
     @IBAction func moveToGame(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
         AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
     @IBAction func moveToCredits(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
+        AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
     @IBAction func moveToOptions(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
+        AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
 
     @IBAction func moveToRecords(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-         AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
+        AVAudioPlayer.playSpecAudio(audioPiece: "Click", volume: 0.7)
     }
-
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
     }
 
     override func viewDidLoad() {
+        
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        
         super.viewDidLoad()
 
-        bannerView.adUnitID = ""
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
-        
+
         UserDefaults.isFirstLaunchMenu()
 
         // Configure the view.
@@ -153,7 +151,7 @@ extension UserDefaults {
 
             // Set the starting time which will be changed later to account for pauses.
             UserDefaults.standard.set(0, forKey: "start")
-            
+
             UserDefaults.standard.set(true, forKey: "musicSwitchState")
             UserDefaults.standard.set(true, forKey: "soundSwitchState")
 
@@ -162,7 +160,7 @@ extension UserDefaults {
             UserDefaults.standard.set(true, forKey: "shouldPlay")
 
             audioPlayer.volume = 0.9
-            
+
             // Play the music.
             audioPlayer.play()
 
@@ -178,16 +176,16 @@ extension UserDefaults {
 
 
 extension AVAudioPlayer {
-    
+
     // Variable to control playing of sounds.
-    
+
     /// Takes the specific mp3 file and volume to play sound.
     static func playSpecAudio(audioPiece: String, volume: Float) {
-        if (UserDefaults.standard.bool(forKey: "shouldMakeSounds" )) {
-            
+        if (UserDefaults.standard.bool(forKey: "shouldMakeSounds")) {
+
             // Set path to music.
             let url = Bundle.main.url(forResource: audioPiece, withExtension: "mp3")
-            
+
             // Instantiate the musicPlayer object and catch errors if they arise.
             do {
                 soundPlayer = try AVAudioPlayer(contentsOf: url!)
@@ -195,7 +193,7 @@ extension AVAudioPlayer {
             } catch _ as NSError {
                 print("error in instantiating soundAudioPlayer")
             }
- 
+
             soundPlayer.volume = volume
             soundPlayer.play()
         }

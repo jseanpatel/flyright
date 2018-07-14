@@ -22,9 +22,6 @@ class GameViewController: UIViewController {
     // This outlet will periodically calculate scores using the vales of tilesLabel and turnLabel.
     @IBOutlet weak var scoreLabel: UILabel!
 
-    // Reference for getting and setting records.
-    weak var recordsVC: RecordsViewController!
-
     var gameAudioPlayer: AVAudioPlayer!
 
     // This var will be a running count of all turns.
@@ -72,19 +69,19 @@ class GameViewController: UIViewController {
     @IBAction func turn(_ sender: UIButton) {
         level.getShipRef()?.changeDirection()
         turns += 1
-        AVAudioPlayer.playSpecAudio(audioPiece: "FlyRight", volume: 0.45)
+        AVAudioPlayer.playSpecAudio(audioPiece: "FlyRight", volume: 0.5)
     }
 
     //End the game and transition over the GameOverViewController.
     func gameOver() {
 
-        AVAudioPlayer.playSpecAudio(audioPiece: "End", volume: 0.55)
+        AVAudioPlayer.playSpecAudio(audioPiece: "End", volume: 0.6)
 
         let gameOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "gameOverID") as! GameOverViewController
         gameOverVC.gVC = self
         gameOverVC.view.tag = 100
         gameOverVC.view.frame = self.view.frame
-
+        
         self.addChildViewController(gameOverVC)
         self.view.addSubview(gameOverVC.view)
         gameOverVC.didMove(toParentViewController: self)
@@ -116,11 +113,9 @@ class GameViewController: UIViewController {
 
     // Reset all labels to 0 when restarting game.
     func resetLabels() {
-        tilesLabel.text = String(format: "%ld", 0)
-        //reinitialize turns to 0
         turns = 0
+        tilesLabel.text = String(format: "%ld", 0)
         turnLabel.text = String(format: "%ld", 0)
-        //here the genScore() func is dynamically called to continually update the displayed total score
         scoreLabel.text = String(format: "%ld", 0)
     }
 
@@ -217,7 +212,6 @@ class GameViewController: UIViewController {
 
     func beginGame() {
         shuffle()
-        // scene.animateBeginGame()
     }
 
     func shuffle() {

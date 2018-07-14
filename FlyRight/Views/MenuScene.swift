@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  MenuScene.swift
 //  FlyRight
 //
 //  Created by Jacob Patel on 7/1/17.
@@ -37,7 +37,7 @@ class MenuScene: SKScene {
         // Add a new node that is the container for all other layers on the playing
         // field. This gameLayer is also centered in the screen.
         addChild(gameLayer)
-        
+
     }
 }
 

@@ -19,7 +19,7 @@ var timesRun = 0
 class Level {
 
     var shipAudioPlayer: AVAudioPlayer!
-    
+
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     weak var scene: GameScene!
 
@@ -27,7 +27,6 @@ class Level {
     var shipRef: Space?
 
     // This var will be the running static score of how many tiles the spaceShip has flown over.
-    // Really you shouldn't have two variables with the same name
     var tileCount: Int = 0
 
     // Variable to access the Space type.
@@ -48,7 +47,7 @@ class Level {
 
     // Variable of viewController to call showGameOver() (moved to gameOver).
     weak var viewController: GameViewController!
-    
+
     // MARK: Initialization
 
     // Create a level by loading it from a file.
@@ -155,12 +154,6 @@ class Level {
         if ((randomX != getShipRef()!.getRow()) && (randomY != getShipRef()!.getColumn())) {
             tiles[randomX, randomY] = Tile()
         }
-    }
-
-    // UPDATE THIS JACOB
-    // This method will recalculate the score at the restart of the game.
-    func calculateScore() {
-        tileCount = 0
     }
 
     // MARK: Query the level
