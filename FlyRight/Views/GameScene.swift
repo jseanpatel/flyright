@@ -40,7 +40,6 @@ extension UIImage {
     }
 }
 
-
 class GameScene: SKScene {
 
     var gameViewController: GameViewController?

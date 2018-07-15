@@ -10,6 +10,7 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
 
@@ -21,9 +22,9 @@ class GameViewController: UIViewController {
 
     // This outlet will periodically calculate scores using the vales of tilesLabel and turnLabel.
     @IBOutlet weak var scoreLabel: UILabel!
-
+    
     var gameAudioPlayer: AVAudioPlayer!
-
+    
     // This var will be a running count of all turns.
     var turns: Int = 0
 
@@ -149,7 +150,7 @@ class GameViewController: UIViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
     }
-
+    
     func setUpLevel() {
         super.viewDidLoad()
         // Configure the view.

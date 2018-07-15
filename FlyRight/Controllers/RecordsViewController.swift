@@ -66,9 +66,10 @@ class RecordsViewController: UIViewController {
         // Make sure high scores are current by updating labels.
         updateLabels()
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        bannerView.adUnitID = "ca-app-pub-7204561255681761/8909278541"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+ 
 
         // Check if its the first launch to set default UserDefault values.
         UserDefaults.isFirstLaunchRecords()

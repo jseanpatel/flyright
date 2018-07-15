@@ -12,16 +12,16 @@ import AVFoundation
 import Firebase
 import GoogleMobileAds
 
-class GameOverViewController: UIViewController {
+class GameOverViewController: UIViewController, GADInterstitialDelegate {
 
     weak var gVC: GameViewController!
 
     var scene: GameOverScene!
-
-    var interstitial: GADInterstitial!
-
+    
     // MARK: View Controller Functions
-
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -60,16 +60,6 @@ class GameOverViewController: UIViewController {
             self.view.alpha = 1.0
             self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
-        
-        let request = GADRequest()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
-        interstitial.delegate = self as? GADInterstitialDelegate
-        interstitial.load(request)
-        if interstitial != nil {
-            if interstitial.isReady {
-                interstitial.present(fromRootViewController: self)
-            }
-        }
     }
 
     func removeAnimate()
@@ -81,20 +71,14 @@ class GameOverViewController: UIViewController {
 
         })
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let request = GADRequest()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
-        interstitial.delegate = self as? GADInterstitialDelegate
-        interstitial.load(request)
-        if interstitial != nil {
-            if interstitial.isReady {
-                interstitial.present(fromRootViewController: self)
-            }
-        }
         
+        bannerView.adUnitID = "ca-app-pub-7204561255681761/8909278541"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+ 
         // Transparent background for the pop-up.
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         //Toggle the fade in/out animations for the pop-up.

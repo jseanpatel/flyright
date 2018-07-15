@@ -58,12 +58,12 @@ class MenuViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        
+
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        
+
         super.viewDidLoad()
 
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        bannerView.adUnitID = "ca-app-pub-7204561255681761/8909278541"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
 
@@ -147,7 +147,6 @@ extension UserDefaults {
             } catch let error as NSError {
                 print(error.debugDescription)
             }
-            audioPlayer.numberOfLoops = -1
 
             // Set the starting time which will be changed later to account for pauses.
             UserDefaults.standard.set(0, forKey: "start")
