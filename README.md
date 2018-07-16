@@ -2,7 +2,7 @@
 
 *Delve into the depths of space and fight to stay alive.* 
 
-[![Appstore](/Users/jacobpatel/Documents/FlyRight/FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png)](https://appstoreprofile)
+[![Appstore](https://github.com/jacobseanpatel/FlyRight/blob/master/FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60%403x.png)
 
 ## Table of Contents
 - [Description](#description)
@@ -29,10 +29,10 @@ A thanks to outer space and back to my older brother for his support along this 
 
 ## Screenshots
 
-![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/Menu.png "Fly around the menu.")
-![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/Game.png "Carefully maneuver around asteroids.")
-![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/GameOver.png "Avoid a deadly crash.")
-![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/Records.png "Compete against your friends!")
+![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Menu.png "Fly around the menu.")
+![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Game.png "Carefully maneuver around asteroids.")
+![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/GameOver.png "Avoid a deadly crash.")
+![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Records.png "Compete against your friends!")
 
 ## Deployment
 
