@@ -2,7 +2,7 @@
 
 *Delve into the depths of space and fight to stay alive.* 
 
-[![Appstore](https://github.com/jacobseanpatel/FlyRight/blob/master/FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60%403x.png)
+![Appstore](https://github.com/jacobseanpatel/FlyRight/blob/master/FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60%402x.png)
 
 ## Table of Contents
 - [Description](#description)
@@ -25,14 +25,14 @@ FlyRight is an adventure game that I created to teach myself Swift.
 
 ## Acknowledgements
 
-A thanks to outer space and back to my older brother for his support along this journey. Thank you to my two wonderful parents for being supportive and encouraging to my interests. 
+A thanks to outer space and back to my older brother for his support along this journey. Thank you to my two wonderful parents for being supportive and encouraging.
 
 ## Screenshots
 
-![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Menu.png "Fly around the menu.")
-![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Game.png "Carefully maneuver around asteroids.")
-![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/GameOver.png "Avoid a deadly crash.")
-![alt tag](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Records.png "Compete against your friends!")
+![Menu](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Menu.png)
+![Game](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Game.png)
+![GameOver](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/GameOver.png)
+![Launch](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Launch.png)
 
 ## Deployment
 
