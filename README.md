@@ -1,29 +1,56 @@
-# FlyRight - Space Adventure
+# FlyRight - Space Adventure 
 
-Delve into the depths of space and fight to stay alive. 
+*Delve into the depths of space and fight to stay alive.* 
+
+[![Appstore](/Users/jacobpatel/Documents/FlyRight/FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png)](https://appstoreprofile)
 
 ## Table of Contents
-- [Biography](#biography)
-- [Technologies Utilized](#technologiesutilized)
-- [Credits](#credits)
+- [Description](#description)
+- [Technologies](#technologies)
+- [Acknowledgements](#acknowledgements)
 - [Screenshots](#screenshots)
+- [Deployment](#deployment)
+- [License](#license)
 
+## Description
 
-## Biography
+FlyRight is an adventure game that I created to teach myself Swift.
 
-Hello there, my name is Jacob Patel. In the late summer of 2017 I decided to sharpen my Swift skills by creating a small game known as FlyRight. This project quickly expanded and before I knew it, the once simple single-view application became a complex multi-view game. This game represents my struggle to venture into the unknown around me, the dark looming space, to fly the right path to success. (SAY WHAT PLATFORM)
-
-## Technologies Utilized
+## Technologies
 
 * SpriteKit
 * UIKit
 * Foundation
-* Firebase
-* GoogleMobileAds
-* GoogleToolboxForMac
+* Google Firebase
 
-## Credits
+## Acknowledgements
 
-I'd like to firstly thank my older brother for his support in this journey, as well as my parents for their help along the way. Without the help of those around me, this project would not have been possible.
+A thanks to outer space and back to my older brother for his support along this journey. Thank you to my two wonderful parents for being supportive and encouraging to my interests. 
 
 ## Screenshots
+
+![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/Menu.png "Fly around the menu.")
+![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/Game.png "Carefully maneuver around asteroids.")
+![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/GameOver.png "Avoid a deadly crash.")
+![alt tag](/Users/jacobpatel/Documents/FlyRight/Screenshots/Records.png "Compete against your friends!")
+
+## Deployment
+
+This application is targeted for iOS on iPhone, iPad is unsupported. This application can be reached [here](https://appstoreprofile) or by clicking the app icon at the top of this page.
+
+## License
+
+ Copyright (C) 2018 Jacob Patel
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
