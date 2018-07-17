@@ -2,7 +2,7 @@
 
 *Delve into the depths of space and fight to stay alive.* 
 
-![Appstore](https://github.com/jacobseanpatel/FlyRight/blob/master/FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60%402x.png)
+![Appstore](FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png)
 
 ## Table of Contents
 - [Description](#description)
@@ -14,14 +14,13 @@
 
 ## Description
 
-FlyRight is an adventure game that I created to teach myself Swift.
+FlyRight is an adventure game that I created to teach myself Swift. To succeed, the player must maneuver a badly damaged spaceship inside of a grid while only being able to turn right.
 
 ## Technologies
 
 * SpriteKit
 * UIKit
 * Foundation
-* Google Firebase
 
 ## Acknowledgements
 
@@ -29,10 +28,10 @@ A thanks to outer space and back to my older brother for his support along this 
 
 ## Screenshots
 
-![Menu](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Menu.png)
-![Game](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Game.png)
-![GameOver](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/GameOver.png)
-![Launch](https://github.com/jacobseanpatel/FlyRight/blob/master/Screenshots/Launch.png)
+![Menu](Screenshots/Menu.jpg =207x368)
+![Game](Screenshots/Game.jpg =207x368)
+![GameOver](Screenshots/GameOver.jpg =207x368)
+![Launch](Screenshots/Launch.jpg =207x368)
 
 ## Deployment
 
