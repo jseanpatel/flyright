@@ -28,10 +28,8 @@ A thanks to outer space and back to my older brother for his support along this 
 
 ## Screenshots
 
-<img src="Screenshots/Menu.jpg" width="207" height="368">
-<img src="Screenshots/Game.jpg " width="207" height="368">
-<img src="Screenshots/GameOver.jpg" width="207" height="368">
-<img src="Screenshots/Launchscreen.jpg" width="207" height="368">
+<img src="Screenshots/Menu.jpg" width="207" height="368"> <img src="Screenshots/Game.jpg" width="207" height="368">
+<img src="Screenshots/GameOver.jpg" width="207" height="368"> <img src="Screenshots/Launchscreen.jpg" width="207" height="368">
 
 ## Deployment
 
