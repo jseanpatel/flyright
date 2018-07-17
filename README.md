@@ -28,10 +28,10 @@ A thanks to outer space and back to my older brother for his support along this 
 
 ## Screenshots
 
-![Menu](Screenshots/Menu.jpg =207x368)
-![Game](Screenshots/Game.jpg =207x368)
-![GameOver](Screenshots/GameOver.jpg =207x368)
-![Launch](Screenshots/Launch.jpg =207x368)
+<img src="Screenshots/Menu.jpg" width="207" height="368">
+<img src="Screenshots/Game.jpg " width="207" height="368">
+<img src="Screenshots/GameOver.jpg" width="207" height="368">
+<img src="Screenshots/Launch.jpg" width="207" height="368">
 
 ## Deployment
 
