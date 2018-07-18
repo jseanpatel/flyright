@@ -63,11 +63,9 @@ class MenuViewController: UIViewController {
 
         super.viewDidLoad()
 
-        /**
         bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
- */
 
         UserDefaults.isFirstLaunchMenu()
 

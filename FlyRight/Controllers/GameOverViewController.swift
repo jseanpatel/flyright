@@ -75,11 +75,9 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /**
         bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
- */
  
         // Transparent background for the pop-up.
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
