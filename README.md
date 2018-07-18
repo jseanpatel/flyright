@@ -35,6 +35,8 @@ A thanks to outer space and back to my older brother for his support along this 
 
 This application is targeted for iOS on iPhone, iPad is unsupported. This application can be reached [here](https://appstoreprofile) or by clicking the app icon at the top of this page.
 
+To build from source simply clone the repository, open in Xcode, and build for target device.
+
 ## License
 
  Copyright (C) 2018 Jacob Patel
