@@ -28,14 +28,14 @@ A thanks to outer space and back to my older brother for his support along this 
 
 ## Screenshots
 
-<img src="Screenshots/Menu.jpg" width="207" height="368">
-<img src="Screenshots/Game.jpg " width="207" height="368">
-<img src="Screenshots/GameOver.jpg" width="207" height="368">
-<img src="Screenshots/Launchscreen.jpg" width="207" height="368">
+<img src="Screenshots/Menu.jpg" width="207" height="368"> <img src="Screenshots/Game.jpg" width="207" height="368">
+<img src="Screenshots/GameOver.jpg" width="207" height="368"> <img src="Screenshots/Launchscreen.jpg" width="207" height="368">
 
 ## Deployment
 
 This application is targeted for iOS on iPhone, iPad is unsupported. This application can be reached [here](https://appstoreprofile) or by clicking the app icon at the top of this page.
+
+To build from source simply clone the repository, open in Xcode, and build for target device.
 
 ## License
 
