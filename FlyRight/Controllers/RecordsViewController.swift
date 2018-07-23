@@ -63,9 +63,12 @@ class RecordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        scoreHigh.minimumScaleFactor = 0.5
+        scoreHigh.adjustsFontSizeToFitWidth = true
+        
         // Make sure high scores are current by updating labels.
         updateLabels()
-        
+
         bannerView.adUnitID = "ca-app-pub-7204561255681761/89092785411"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())

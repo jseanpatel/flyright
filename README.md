@@ -33,7 +33,7 @@ A thanks to outer space and back to my older brother for his support along this 
 
 ## Deployment
 
-This application is targeted for iOS on iPhone, iPad is unsupported. This application can be reached [here](https://itunes.apple.com/us/app/flyright-space-adventure/id1412455323?ls=1&mt=8) or by clicking the app icon at the top of this page.
+This application is targeted for iOS on iPhone, iPad is unsupported. This application can be reached [here](https://itunes.apple.com/us/app/flyright-space-adventure/id1412455323?ls=1&mt=8) or by clicking the  app icon at the top of this page.
 
 To build from source simply clone the repository, open in Xcode, and build for target device.
 

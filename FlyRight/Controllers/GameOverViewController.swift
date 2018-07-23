@@ -13,7 +13,7 @@ import Firebase
 import GoogleMobileAds
 
 class GameOverViewController: UIViewController, GADInterstitialDelegate {
-
+    
     weak var gVC: GameViewController!
 
     var scene: GameOverScene!
@@ -31,6 +31,7 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
     }
 
     @IBAction func restartGame(_ sender: Any) {
+        
         self.removeAnimate()
         if self.view.isDescendant(of: gVC.view) {
             self.view.removeFromSuperview()

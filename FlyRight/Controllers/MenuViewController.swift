@@ -18,6 +18,8 @@ var audioPlayer: AVAudioPlayer!
 var soundPlayer: AVAudioPlayer!
 
 class MenuViewController: UIViewController {
+    
+    var interstitial: GADInterstitial!
 
     // The scene draws the tiles and space sprites, and handles actions (swipes for CC).
     var scene: MenuScene!
@@ -62,7 +64,8 @@ class MenuViewController: UIViewController {
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
 
         super.viewDidLoad()
-
+    
+        
         bannerView.adUnitID = "ca-app-pub-7204561255681761/8909278541"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())

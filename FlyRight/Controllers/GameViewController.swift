@@ -14,6 +14,8 @@ import GoogleMobileAds
 
 class GameViewController: UIViewController {
 
+    var interstitial: GADInterstitial!
+
     // This outlet counts number of turns to factor into the score.
     @IBOutlet weak var turnLabel: UILabel!
 
@@ -22,9 +24,9 @@ class GameViewController: UIViewController {
 
     // This outlet will periodically calculate scores using the vales of tilesLabel and turnLabel.
     @IBOutlet weak var scoreLabel: UILabel!
-    
+
     var gameAudioPlayer: AVAudioPlayer!
-    
+
     // This var will be a running count of all turns.
     var turns: Int = 0
 
@@ -82,13 +84,25 @@ class GameViewController: UIViewController {
         gameOverVC.gVC = self
         gameOverVC.view.tag = 100
         gameOverVC.view.frame = self.view.frame
-        
+
         self.addChildViewController(gameOverVC)
         self.view.addSubview(gameOverVC.view)
         gameOverVC.didMove(toParentViewController: self)
 
         // Check for new records.
         compHighScores()
+
+        if interstitial.isReady {
+            let number = arc4random_uniform(11)
+            if (number > 5) {
+                print(number)
+                interstitial.present(fromRootViewController: self)
+                interstitial = createAndLoadInterstitial()
+            }
+        } else {
+            print("ad wasn't ready")
+        }
+
     }
     // A method that checks if the current class variables of the finished game are larger than the high scores.
     func compHighScores() {
@@ -150,7 +164,7 @@ class GameViewController: UIViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .portraitUpsideDown]
     }
-    
+
     func setUpLevel() {
         super.viewDidLoad()
         // Configure the view.
@@ -179,8 +193,19 @@ class GameViewController: UIViewController {
         beginGame()
     }
 
+    func createAndLoadInterstitial() -> GADInterstitial {
+        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-7204561255681761/5766742909")
+        let request = GADRequest()
+        interstitial.load(request)
+        return interstitial
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        interstitial = nil
+
+        interstitial = createAndLoadInterstitial()
 
         // Configure the view.
         let skView = self.view as! SKView
