@@ -2,7 +2,7 @@
 
 *Delve into the depths of space and fight to stay alive.* 
 
-[![Appstore](FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png)](https://itunes.apple.com/us/app/flyright-space-adventure/id1412455323?ls=1&mt=8)
+[![Appstore](FlyRight/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png)](https://itunes.apple.com/us/app/flyright-space-adventure/id1412455323?ls=1&mt=8)
 
 ## Table of Contents
 - [Description](#description)
